@@ -1,7 +1,7 @@
 Cronograma
 
 
-##Dia 1
+## Dia 1
 
 Teórica
 
@@ -22,6 +22,14 @@ Prática 2.
 
 Leitura de acompanhamento: análise de HW em humanos, paper
 
+## Dia 2
 
+## Dia 3
+
+## Dia 4
+
+## Dia 5
+
+## Dia 6
 
 
