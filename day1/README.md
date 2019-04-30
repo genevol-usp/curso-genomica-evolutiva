@@ -17,3 +17,15 @@ Os seguintes arquivos de resultado serão salvos em `./data`:
 - VCF com indivíduos YRI, variantes bialélicas, com MAF > 5%
 - Arquivo de frequências alélicas
 - Arquivo com resultados da computação de HWE
+
+
+## Roteiro atualizado
+
+- Iniciar com intro de vcf
+- Usar vcf tools para descrever HW de modo geral no cromossomo 21 (fazer isso entre nós, preparar roteiro), usando hardy
+- fazer no Rstudio no servidor.
+- identificar região com desvio (requer transferÊncia para local, para usar R).
+- extrair trecho do braço curto que ilustra desvio
+- Vitor bolar exemplos que encaminhem o processo de gerar os plots de HW
+
+- leitura do artigo Bruce e Jan
