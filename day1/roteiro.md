@@ -180,4 +180,23 @@ VCFtools: manipulação e análises com arquivos VCF
     # obter as frequências alélicas
     vcftools --vcf $yrivcf.recode.vcf --out ./results/yri --freq
 
+P-valores de HWE ao longo do Chr21
+----------------------------------
+
 ![](roteiro_files/figure-markdown_github/unnamed-chunk-5-1.png)
+
+Investigar a região com alto desvio e comparar com baixo desvio
+---------------------------------------------------------------
+
+### Fazer 2 subsets do VCF correspondendo às 2 regiões
+
+    #!/bin/bash
+
+    # dados de entrada e saída
+    chr=chr21
+    yrivcf=./results/${chr}.yri.filtered.recode.vcf
+    outshort=./results/${chr}.yri.subset.short
+    outlong=./results/${chr}.yri.subset.long
+
+    vcftools --vcf $yrivcf --chr $chr --from-bp 7500000 --to-bp 12500000 --out $outshort   
+    vcftools --vcf $yrivcf --chr $chr --from-bp 20000000 --to-bp 25000000 --out $outlong
