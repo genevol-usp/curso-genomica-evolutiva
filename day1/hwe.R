@@ -1,6 +1,6 @@
 library(tidyverse)
 
-vcf <- read_tsv("./data/chr22.yri.filtered.vcf.gz", comment = "##")
+vcf <- read_tsv("./data/chr21.yri.filtered.vcf.gz", comment = "##")
 
 vcfl <- vcf %>%
     rowid_to_column("i") %>%

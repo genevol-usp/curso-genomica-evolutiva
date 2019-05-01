@@ -12,11 +12,11 @@ yrivcf=./data/${chr}.yri.filtered
 #bcftools query -f '%ID %AN %AC{0}\n' $yrivcf |\
 #    awk '{printf "%s %f\n",$1,$3/$2}' > ./data/allele_freq.tsv
 #
-#zcat $vcf | grep -v '^#' | awk '{print $2}' | uniq -c | awk '$1 >= 2 {print $2}' > duplicated_vars.txt
+zcat $vcf | grep -v '^#' | awk '{print $2}' | uniq -c | awk '$1 >= 2 {print $2}' > duplicated_vars.txt
 
 vcftools --gzvcf $vcf --keep $samples \
     --exclude-positions duplicated_vars.txt --min-alleles 2 --max-alleles 2 --maf 0.05 --max-maf 0.95 \
-    --recode \
-    --out $yrivcf    
+    --recode --out $yrivcf    
 
-#vcftools --gzvcf $yrivcf --out ./data/genos --hardy
+vcftools --vcf $yrivcf.recode.vcf --out ./data/genos --hardy
+vcftools --vcf $yrivcf.recode.vcf --out ./data/freq --freq
