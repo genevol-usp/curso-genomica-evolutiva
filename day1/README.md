@@ -29,5 +29,5 @@ Os seguintes arquivos de resultado serão salvos em `./data`:
 - Vitor bolar exemplos que encaminhem o processo de gerar os plots de HW
 
 - leitura do [artigo Bruce e Jan](https://drive.google.com/file/d/159HeFi2N-2rZpAmTy-NcGnRwciH-2cxc/view?usp=sharing)
-$ X^2 $ and $\delta$ 
+ 
 
