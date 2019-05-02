@@ -26,7 +26,6 @@
 
 
 # O R para guardar pequenas informações de texto (strings)
-```{r}
 "R e dados genômicos em larga escala"
 
 
@@ -58,7 +57,7 @@ log10(100)
 
 
 # R e os pacotes (conjuto de várias funções)
-install.packages("genetics", contriburl = contrib.url("CRAN"))
+install.packages("genetics")
 
 # R e gráficos
 dist<-runif (1000)
@@ -71,7 +70,7 @@ hist(dist)
 
 # 1. Crie um novo diretório para guardar os exercícios. Em seguida mude seu diretorio de trabalho em R para lá.
 getwd()
-setwd("/Users/Caminho_para_o_diretorio")
+setwd("Caminho_para_o_diretorio")
 
 
 # 2. Crie o seguinte data frame e estime a média, mediana, sd, da coluna idade.
@@ -82,7 +81,9 @@ setwd("/Users/Caminho_para_o_diretorio")
 #   4 A04    26      m
 #   5 A05    29      m
 
-dataset<-data.frame(cbind(seq=1:5, id=c("A01", "A02", "A03", "A04", "A05"), idade=c(20,22,25,26,29), genero=c("f", "m", "f", "m", "m")))
+dataset<-data.frame(seq=1:5, id=c("A01", "A02", "A03", "A04", "A05"), 
+                    idade=c(20,22,25,26,29), 
+                    genero=c("f", "m", "f", "m", "m"))
 dataset
 mean(dataset$idade)
 str(dataset)
@@ -91,25 +92,25 @@ median(as.numeric(dataset$idade))
 sd(as.numeric(dataset$idade))
 
 # 3. Leia o arquivo "example_table.txt" no R
-table<-read.table("./example_table.txt", header=F) # ler o arquivo em forma de tabela
+tab<-read.table("./example_table.txt", header=F, stringsAsFactors = FALSE) # ler o arquivo em forma de tabela
 
-head(table) # mostra na tela as primeiras linhas
-tail(table) # mostra na tela as linhas finais
+head(tab) # mostra na tela as primeiras linhas
+tail(tab) # mostra na tela as linhas finais
 
 # 4. Quantas linhas e colunas o arquivo "example_table.txt" possui?
-nrow(table)
-ncol(table)
+nrow(tab)
+ncol(tab)
 
 # 5. Renomeie as colunas do arquivo "example_table.txt" para ID, L1, L2, L3, L4, Genero, Idade e Etnia respectivamente
 
-colnames(table)<- c("ID", "L1", "L2", "L3", "L4", "Genero", "Idade", "Etnia") # nomear as colunas
+colnames(tab)<- c("ID", "L1", "L2", "L3", "L4", "Genero", "Idade", "Etnia") # nomear as colunas
 
-head(table)
+head(tab)
 
 
 # 6. Qual a média, mediana, maior e menor idade dos indivíduos dessa tabela?
-mean(table$Idade)
-mean(table$Idade, na.rm=T)
+mean(tab$Idade)
+mean(tab$Idade, na.rm=T)
 
 median(table$Idade, na.rm=T)
 
@@ -138,10 +139,10 @@ FreqT
 # 8. Repita a atividade 7 usando o pacote "genetics"
 
 # Se o pacote "genetics" não estiver instalado, você pode baixa-lo com o seguinte comando:
-install.packages("genetics")
+# install.packages("genetics")
 
 # Carregue o pacote
-library("genetics", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+library("genetics")
 
 Geno<- genotype (table$L1, sep="") # a função genotype dá direto as freq alelicas e genotipicas
 summary(Geno) # visualizar a análise
@@ -195,12 +196,3 @@ plot(table$Idade, col= "red", main= "Gráfico de dispersão das idades", xlab="I
 
 # 14. Construa um gráfico mostrando se há variação de idade entre os grupos étnicos
 plot(table$Etnia, table$Idade, main="Variação das idades entres os diferentes grupos étnicos", xlab="Grupos étnicos", ylab="Idade")
-
-
-
-
-
-
-
-
-
