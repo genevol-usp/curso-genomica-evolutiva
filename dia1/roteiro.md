@@ -190,7 +190,7 @@ Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
 
 ### Crh21 inteiro
 
-![](roteiro_files/figure-markdown_github/chr21_whole-1.png)![](roteiro_files/figure-markdown_github/chr21_whole-2.png)
+![](roteiro_files/figure-markdown_github/chr21_whole-1.png)
 
 ### Chr21: região com alto desvio
 
