@@ -12,6 +12,7 @@ freqs_df <- read_tsv("./results/chr21.yri.hwe") %>%
     mutate(n = pmap_int(list(ref_ref, ref_alt, alt_alt), sum)) %>%
     mutate_at(vars(ref_ref:alt_alt), ~./n) %>%
     left_join(freq, by = "pos") %>%
-    select(pos, f_ref_allele, ref_ref:alt_alt) 
+    select(pos, f_ref_allele, ref_ref:alt_alt) %>% 
+    mutate_at(vars(f_ref_allele:alt_alt), ~round(., 3))
 
 write_tsv(freqs_df, "./results/chr21.yri.frequencies.tsv")
