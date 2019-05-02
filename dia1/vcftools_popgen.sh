@@ -2,7 +2,7 @@
 
 # dados de entrada e saída
 chr=chr$1
-yrivcf=./results/chr21.yri.filtered.recode.vcf
+yrivcf=./results/${chr}.yri.filtered.recode.vcf
 out=./results/$chr.yri
 
 # fazer análise de HWE
