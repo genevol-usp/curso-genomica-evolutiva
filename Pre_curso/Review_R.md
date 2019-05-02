@@ -175,7 +175,7 @@ hist(dist)
 
 ![](Review_R_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
-# Prática 1. Organização e análise de dados
+# Prática. Organização e análise de dados
 
 1.  Crie um novo diretório para guardar os exercícios. Em seguida mude
     seu diretorio de trabalho em R para lá.
@@ -189,7 +189,7 @@ getwd()
     ## [1] "/Users/Kelly/Documents/Class/Genomica_Evolutiva/2019/Pre_Curso"
 
 ``` r
-setwd("/Users/Kelly/Documents/Class/_UNB/Praticas/aula2/")
+setwd("/Users/Caminho_para_o_diretorio_criado")
 ```
 
 2.  Crie o seguinte data frame e estime a média, mediana, sd, da coluna
@@ -260,7 +260,7 @@ sd(as.numeric(dataset$idade))
 <!-- end list -->
 
 ``` r
-table<-read.table("/Users/Kelly/Documents/Class/Genomica_Evolutiva/2019/Pre_Curso/example_table.txt", header=F) # ler o arquivo em forma de tabela
+table<-read.table("./example_table.txt", header=F) # ler o arquivo em forma de tabela
 
 head(table) # mostra na tela as primeiras linhas
 ```
