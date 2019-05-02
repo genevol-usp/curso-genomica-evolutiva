@@ -183,20 +183,19 @@ VCFtools: manipulação e análises com arquivos VCF
 P-valores de HWE ao longo do Chr21
 ----------------------------------
 
-![](roteiro_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](roteiro_files/figure-markdown_github/chr21_hwe_p-1.png)
 
-Investigar a região com alto desvio e comparar com baixo desvio
----------------------------------------------------------------
+Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
+---------------------------------------------------------------------------
 
-### Fazer 2 subsets do VCF correspondendo às 2 regiões
+### Crh21 inteiro
 
-    #!/bin/bash
+![](roteiro_files/figure-markdown_github/chr21_whole-1.png)![](roteiro_files/figure-markdown_github/chr21_whole-2.png)
 
-    # dados de entrada e saída
-    chr=chr21
-    yrivcf=./results/${chr}.yri.filtered.recode.vcf
-    outshort=./results/${chr}.yri.subset.short
-    outlong=./results/${chr}.yri.subset.long
+### Chr21: região com alto desvio
 
-    vcftools --vcf $yrivcf --chr $chr --from-bp 7500000 --to-bp 12500000 --out $outshort   
-    vcftools --vcf $yrivcf --chr $chr --from-bp 20000000 --to-bp 25000000 --out $outlong
+![](roteiro_files/figure-markdown_github/chr21_short-1.png)
+
+### Chr21: região com baixo desvio
+
+![](roteiro_files/figure-markdown_github/chr21_long-1.png)
