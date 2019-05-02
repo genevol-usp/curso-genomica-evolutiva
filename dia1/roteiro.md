@@ -218,6 +218,17 @@ Diversidade genética ao longo do Chr21
 P-valores de HWE ao longo do Chr21
 ----------------------------------
 
+Nossa primeira tarefa será examinar se há regiões do cromossomo 21 com muito desvio de proporções esperadas sob HW.
+
+Podemos fazer isso simplesmente examiando como os p-values se distribuem ao longo do cromossomo 21. Lembre que quando o -log do p-value é alto, isso significa que o p-value é baixo, implicando que é muio improvável aquela amostra ser oriunda de uma população que evolui sobre condições de Hardy-Weinberg.
+
+Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos investigá-la mais a fundo 
+
+Para começar, vamos nos lembrar que, assumindo HW, temos uma expectativa teórica sobre qual deve ser a relação entre frequências alélicas e genotípicas. Sua tarefa será examinar se, para os dados do cromossomo 21, as frequências dos genótipos se encaixam nessas expectativas. Faça isso usando o R e uma tabela com frequências genotípicas observadas, que será gerada com um script, a partir do resultado gerado pelo vcftools. 
+
+Como os dados empícos diferem dos esperados? O que pode explicar esse padrão?
+
+
 ![](roteiro_files/figure-markdown_github/chr21_hwe_p-1.png)
 
 Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
