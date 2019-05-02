@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # dados de entrada e saída
-chr=chr21
+chr=chr$1
 vcf=./data/ALL.${chr}_GRCh38.genotypes.20170504.vcf.gz
 samples=./data/yri_sample_ids.txt
 yrivcf=./results/${chr}.yri.filtered
@@ -24,9 +24,3 @@ vcftools --gzvcf $vcf --keep $samples \
     --min-alleles 2 --max-alleles 2 \
     --maf 0.05 --max-maf 0.95 \
     --recode --out $yrivcf    
-
-# fazer análise de HWE
-vcftools --vcf $yrivcf.recode.vcf --out ./results/yri --hardy
-
-# obter as frequências alélicas
-vcftools --vcf $yrivcf.recode.vcf --out ./results/yri --freq
