@@ -1,5 +1,5 @@
 Simulando o processo de deriva genética
-_______________________________________
+==========================================
 
 
 A deriva genética pode ser definida do ponto de vista biológico: oscilações em frequências aléliccas resultantes do tamanho finito das populações.
