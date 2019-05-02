@@ -185,6 +185,14 @@ Subset do VCF com indivíduos e variantes de interesse
         --maf 0.05 --max-maf 0.95 \
         --recode --out $yrivcf    
 
+
+A seguir, nossa tarefa será usar esses dados para extrair algumas informações básicas, que iremos analisar.
+
+1. Frequências genotípicas observadas, esperadas, significância estatísticas do desvio, para cada sítio.
+2. Descrição de frequências alélicas para cada sítio.
+3. Diversidade genética estimada por pi (o número médio de diferenças entre pares de sequências) para janelas de 50kb.
+
+
 Cálculo de estatísticas de PopGen
 ---------------------------------
 
