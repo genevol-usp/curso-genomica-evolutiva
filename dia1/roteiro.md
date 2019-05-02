@@ -213,7 +213,7 @@ Cálculo de estatísticas de PopGen
 Diversidade genética ao longo do Chr21
 --------------------------------------
 
-![](roteiro_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](roteiro_files/figure-markdown_github/chr21_pi-1.png)
 
 P-valores de HWE ao longo do Chr21
 ----------------------------------
@@ -223,14 +223,12 @@ P-valores de HWE ao longo do Chr21
 Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
 ---------------------------------------------------------------------------
 
-### Crh21 inteiro
+Primeiro vamos executar o script a seguir para parsear os arquivos de output do vcftools e gerar uma tabela com frequência do alelo referência e frequência dos genótipos em cada posição.
 
-![](roteiro_files/figure-markdown_github/chr21_whole-1.png)
+``` bash
+Rscript parse_frequencies.R
+```
 
-### Chr21: região com alto desvio
+Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg.
 
-![](roteiro_files/figure-markdown_github/chr21_short-1.png)
-
-### Chr21: região com baixo desvio
-
-![](roteiro_files/figure-markdown_github/chr21_long-1.png)
+Vamos fazer esse gráfico para as regiões de baixo e alto desvio de HWE, e compara-los.
