@@ -5,4 +5,4 @@
 
 - Essa pasta contém os seguintes arquivos:
 (i) Review_R.md, o qual descreve um roteiro para ser explorado em R.
-(ii) example.txt, um arquivo com dados para ser lido e explorado em R.
+(ii) example_table.txt, um arquivo com dados para ser lido e explorado em R.
