@@ -13,14 +13,14 @@ zcat $vcf |\
     grep -v '^#' |\
     awk '{print $2}' |\
     uniq -c |\
-    awk '$1 >= 2 {print $2}' > ./results/duplicated_vars.txt
+    awk '$1 >= 2 {print $2}' > ./results/duplicated_$chr.txt
 
 # selecionar indivíduos YRI
 # excluir posições duplicadas
 # selecionar apenas variantes bialélicas
 # selecionar variantes com MAF >= 5%
 vcftools --gzvcf $vcf --keep $samples \
-    --exclude-positions ./results/duplicated_vars.txt \
+    --exclude-positions ./results/duplicated_$chr.txt \
     --min-alleles 2 --max-alleles 2 \
     --maf 0.05 --max-maf 0.95 \
     --recode --out $yrivcf    

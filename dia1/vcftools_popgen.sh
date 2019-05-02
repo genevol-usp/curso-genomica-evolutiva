@@ -2,14 +2,14 @@
 
 # dados de entrada e saída
 chr=chr$1
-yrivcf=./results/${chr}.yri.filtered
-out=./results/yri$chr
+yrivcf=./results/chr21.yri.filtered.recode.vcf
+out=./results/$chr.yri
 
 # fazer análise de HWE
-vcftools --vcf $yrivcf.recode.vcf --out $out --hardy
+vcftools --vcf $yrivcf --out $out --hardy
 
 # obter as frequências alélicas
-vcftools --vcf $yrivcf.recode.vcf --out $out --freq
+vcftools --vcf $yrivcf --out $out --freq
 
 # calcular estastítica pi por janela de 50kb
-vcftools --vcf $yrivcf.recode.vcf --window-pi 50000 --out $out 
+vcftools --vcf $yrivcf --window-pi 50000 --out $out 

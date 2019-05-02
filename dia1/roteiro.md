@@ -184,24 +184,22 @@ Cálculo de estatísticas de PopGen
 
     # dados de entrada e saída
     chr=chr$1
-    yrivcf=./results/${chr}.yri.filtered
+    yrivcf=./results/chr21.yri.filtered.recode.vcf
     out=./results/$chr.yri
 
     # fazer análise de HWE
-    vcftools --vcf $yrivcf.recode.vcf --out $out --hardy
+    vcftools --vcf $yrivcf --out $out --hardy
 
     # obter as frequências alélicas
-    vcftools --vcf $yrivcf.recode.vcf --out $out --freq
+    vcftools --vcf $yrivcf --out $out --freq
 
     # calcular estastítica pi por janela de 50kb
-    vcftools --vcf $yrivcf.recode.vcf --window-pi 50000 --out $out 
+    vcftools --vcf $yrivcf --window-pi 50000 --out $out 
 
-Diversidade genética ao longo do Chr6
--------------------------------------
+Diversidade genética ao longo do Chr21
+--------------------------------------
 
 ![](roteiro_files/figure-markdown_github/unnamed-chunk-6-1.png)
-
-![](roteiro_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 P-valores de HWE ao longo do Chr21
 ----------------------------------
