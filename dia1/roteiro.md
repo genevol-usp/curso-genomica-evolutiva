@@ -210,10 +210,6 @@ Cálculo de estatísticas de PopGen
     # calcular estastítica pi por janela de 50kb
     vcftools --vcf $yrivcf --window-pi 50000 --out $out 
 
-Diversidade genética ao longo do Chr21
---------------------------------------
-
-![](roteiro_files/figure-markdown_github/chr21_pi-1.png)
 
 P-valores de HWE ao longo do Chr21
 ----------------------------------
@@ -226,7 +222,19 @@ Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos in
 
 Para começar, vamos nos lembrar que, assumindo HW, temos uma expectativa teórica sobre qual deve ser a relação entre frequências alélicas e genotípicas. Sua tarefa será examinar se, para os dados do cromossomo 21, as frequências dos genótipos se encaixam nessas expectativas. Faça isso usando o R e uma tabela com frequências genotípicas observadas, que será gerada com um script, a partir do resultado gerado pelo vcftools. 
 
-Como os dados empícos diferem dos esperados? O que pode explicar esse padrão?
+Como os dados empícos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças? 
+
+
+Diversidade genética ao longo do Chr21
+--------------------------------------
+
+Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversidade genética. Uma forma de estimar heterozigose para dados moleculares é através da "diversidade nucleotídica" (abrivada pela letra grega "pi"), que é dada pelo número médio de diferenças entre pares de sequências. Uma das análises que fizemos gerou estimativas de pi para janelas de 5kb ao longo do cromossomo 21. Examine esses dados, veja qual o pi médio, e discuta o que ele lhe diz sobre a diveridade genética humana. 
+
+Faça uma continha: assumindo que cada um de nossos genomas tem 3,000,000,000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
+
+
+![](roteiro_files/figure-markdown_github/unnamed-chunk-6-1.png)
+
 
 
 ![](roteiro_files/figure-markdown_github/chr21_hwe_p-1.png)
@@ -234,12 +242,14 @@ Como os dados empícos diferem dos esperados? O que pode explicar esse padrão?
 Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
 ---------------------------------------------------------------------------
 
-Primeiro vamos executar o script a seguir para parsear os arquivos de output do vcftools e gerar uma tabela com frequência do alelo referência e frequência dos genótipos em cada posição.
+### Crh21 inteiro
 
-``` bash
-Rscript parse_frequencies.R
-```
+![](roteiro_files/figure-markdown_github/chr21_whole-1.png)
 
-Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg.
+### Chr21: região com alto desvio
 
-Vamos fazer esse gráfico para as regiões de baixo e alto desvio de HWE, e compara-los.
+![](roteiro_files/figure-markdown_github/chr21_short-1.png)
+
+### Chr21: região com baixo desvio
+
+![](roteiro_files/figure-markdown_github/chr21_long-1.png)
