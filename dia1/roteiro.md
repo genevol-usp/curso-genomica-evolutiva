@@ -1,6 +1,12 @@
 Roteiro
 ================
 
+Os objetivos desta atividade prática são os seguintes:
+
+- Permitir um primeiro contato com diferentes formatos de armazenamento de dados genômicos.
+- Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes project.
+- Explorar dados de diversidade genética e frequências genotípicas e fazer interpretações de processos evolutivos que explicam os padrões encontrados.
+
 Formato de dados
 ================
 
@@ -146,6 +152,8 @@ Variant calling (BAM -&gt; VCF)
 
 VCFtools: manipulação e análises com arquivos VCF
 =================================================
+
+Nesta etapa, iremos explorar os dados em formato vcf. Nosso primeiro desafio será criar um arquivo que contém um subconjunto do total de dados, facilitando a execução. Nosso objetivo é buscar, nos arquivos do projeto 1000 Genomas, um subconjunto  de indivíduos africanos, restrito ao cromossomo 21. 
 
 Subset do VCF com indivíduos e variantes de interesse
 -----------------------------------------------------
