@@ -79,7 +79,7 @@ Demografia
 Estrutura populacional
 
 Prática:
-1. Admixture -> brincar com valores de K
+1. Admixture -> brincar com valores de K, alterar tamanho dos parentais, 
 2. PCA -> desafio: explorar o efeito de número de SNPs (explorar sorteio!)
 
 Leitura opcional: Artigo Alexander
@@ -90,6 +90,7 @@ Leitura prévia: Hunt Fraser
 
 1. Associação: de GWAS até traços de interesse evolutivo, expressão tb
 Análise por chunks?
+Retomar PCA
 Ver se há eQTL associado com variante de adaptação.
 Mapeamento de eQTLs
 Expressão e seleção
