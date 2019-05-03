@@ -11,4 +11,6 @@ counts_df <- data.frame(pos = hw$POS,
                         ref_alt = ref_alt,
                         alt_alt = alt_alt)
 
-write_tsv(counts_df, "./results/chr21.yri.genotypecounts.tsv")
+write.table(counts_df, 
+            "./results/chr21.yri.genotypecounts.tsv", 
+            sep = "\t", quote = FALSE, row.names = FALSE)
