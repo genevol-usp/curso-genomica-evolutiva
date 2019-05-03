@@ -73,6 +73,11 @@ Demografia
 
 ## Dia 6
 
+Leitura prévia: Hunt Fraser 
+
+1. Associação: de GWAS até traços de interesse evolutivo, expressão tb
+Análise por chunks?
+Ver se há eQTL associado com variante de adaptação.
 Mapeamento de eQTLs
 Expressão e seleção
 
