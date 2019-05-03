@@ -155,8 +155,8 @@ VCFtools: manipulação e análises com arquivos VCF
 
 Nesta etapa, iremos explorar os dados em formato vcf. Nosso primeiro desafio será criar um arquivo que contém um subconjunto do total de dados, facilitando a execução. Nosso objetivo é buscar, nos arquivos do projeto 1000 Genomas, um subconjunto de indivíduos africanos, restrito ao cromossomo 21.
 
-Subset do VCF com indivíduos e variantes de interesse
------------------------------------------------------
+Gerando um subset do VCF com indivíduos e variantes de interesse
+----------------------------------------------------------------
 
     #!/bin/bash
 
@@ -191,8 +191,8 @@ A seguir, nossa tarefa será usar esses dados para extrair algumas informações
 2.  Descrição de frequências alélicas para cada sítio.
 3.  Diversidade genética estimada por pi (o número médio de diferenças entre pares de sequências) para janelas de 50kb.
 
-Cálculo de estatísticas de PopGen
----------------------------------
+Usando vcftools para fazer cálculo de estatísticas populacionais
+----------------------------------------------------------------
 
     #!/bin/bash
 
@@ -204,26 +204,26 @@ Cálculo de estatísticas de PopGen
     # fazer análise de HWE
     vcftools --vcf $yrivcf --out $out --hardy
 
-    # obter as frequências alélicas
-    vcftools --vcf $yrivcf --out $out --freq
-
     # calcular estastítica pi por janela de 50kb
     vcftools --vcf $yrivcf --window-pi 50000 --out $out 
 
-Diversidade genética ao longo do Chr21
---------------------------------------
+De posso dessas análises, vamos agora explorar os achados e interpretá-los.
 
-![](README_files/figure-markdown_github/chr21_pi-1.png)
-
-P-valores de HWE ao longo do Chr21
+Há desvios de HW no cromossomo 21?
 ----------------------------------
+
+Nossa primeira tarefa será examinar se há regiões do cromossomo 21 com muito desvio de proporções esperadas sob HW.
+
+Podemos fazer isso simplesmente examinando como os p-values se distribuem ao longo do cromossomo 21. Lembre que quando o -log10 do p-value é alto, isso significa que o p-value é baixo, implicando que é muito improvável aquela amostra ser oriunda de uma população que evolui sobre condições de Hardy-Weinberg.
+
+Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos investigá-la mais a fundo.
 
 ![](README_files/figure-markdown_github/chr21_hwe_p-1.png)
 
-Comparar as regiões com baixo e alto desvio em relação à expectativa por HW
----------------------------------------------------------------------------
+Como as frequências genotípicas diferem das esperadas?
+------------------------------------------------------
 
-Primeiro vamos executar o script a seguir para parsear os arquivos de output do vcftools e gerar uma tabela com frequência do alelo referência e frequência dos genótipos em cada posição.
+Para começar, vamos nos lembrar que, assumindo HWE, temos uma expectativa teórica sobre qual deve ser a relação entre frequências alélicas e genotípicas. Sua tarefa será examinar se, para os dados do cromossomo 21, as frequências dos genótipos se encaixam nessas expectativas. Faça isso usando o R e uma tabela com frequências genotípicas observadas, que será gerada com o seguinte script, a partir do resultado gerado pelo vcftools.
 
 ``` bash
 Rscript parse_frequencies.R
@@ -231,7 +231,16 @@ Rscript parse_frequencies.R
 
 Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg.
 
-Vamos fazer esse gráfico para as regiões de baixo e alto desvio de HWE, e compara-los.
+Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças.
+
+Como a diversidade genética se distribui ao longo do Chr21
+----------------------------------------------------------
+
+Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversidade genética. Uma forma de estimar heterozigose para dados moleculares é através da "diversidade nucleotídica" (abreviada pela letra grega `π`), que é dada pelo número médio de diferenças entre pares de sequências. Uma das análises que fizemos gerou estimativas de `π` para janelas de 50kb ao longo do cromossomo 21. Examine esses dados, veja qual o `π` médio, e discuta o que ele lhe diz sobre a diversidade genética humana.
+
+![](README_files/figure-markdown_github/chr21_pi-1.png)
+
+Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
 
 Leitura
 =======
