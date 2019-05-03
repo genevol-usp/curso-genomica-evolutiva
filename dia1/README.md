@@ -1,4 +1,4 @@
-Roteiro
+Explorando dados genômicos: diversidade e Hardy-Weinberg
 ================
 
 Os objetivos desta atividade prática são os seguintes:
