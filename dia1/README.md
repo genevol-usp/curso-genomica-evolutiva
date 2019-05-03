@@ -245,4 +245,4 @@ Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de
 Leitura
 =======
 
-Graffelman and Weir (2017)
+Para completarmos a discussão a respeito de desvios de HW em populações humanas, vamos analisar os nossos achados para o cromossomo 21 consultando o artigo de Graffelman and Weir (2017). Quem tiver tempo, explore o artigo todo. Mas para nossos propósitos, é possível ir direto às seções que tratam dos padrões encontrados para o cromossomo 21.
