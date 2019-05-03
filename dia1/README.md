@@ -226,7 +226,7 @@ Como as frequências genotípicas diferem das esperadas?
 Para começar, vamos nos lembrar que, assumindo HWE, temos uma expectativa teórica sobre qual deve ser a relação entre frequências alélicas e genotípicas. Sua tarefa será examinar se, para os dados do cromossomo 21, as frequências dos genótipos se encaixam nessas expectativas. Faça isso usando o R e uma tabela com frequências genotípicas observadas, que será gerada com o seguinte script, a partir do resultado gerado pelo vcftools.
 
 ``` bash
-Rscript parse_frequencies.R
+Rscript parse_genocounts.R
 ```
 
 Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg.
