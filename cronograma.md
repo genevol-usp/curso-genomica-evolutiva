@@ -43,7 +43,7 @@ Leitura prévia? Texto Ramashandran
  4. Introdução à teoria da coalescência (incluir pi, S e D)
  5. Simulação coalescente simples em R
  
- Leitura pós-aula: Prugnolle (2005)
+ Leitura pós-aula: Prugnolle (2005) como pequeno exemplo
 
 ## Dia 3
 
@@ -60,16 +60,29 @@ Petrov
 Leitura pós-aula: Vitti como revisão (opcional de consulta)
 Leitura pós-aula: da Africa ou EPAS1
 
+Happy Hour!
+
+[FINAL DE SEMANA]
 
 ## Dia 4
 Leitura prévia: Petrov
+Leitura prévia: Genoma de Primatas 
 
 Manhã: inter-específico
 Tarde: continuação das práticas
 
 ## Dia 5
 
+Leitura prévia: Restante do Ramashandran
+
 Demografia
+Estrutura populacional
+
+Prática:
+1. Admixture -> brincar com valores de K
+2. PCA -> desafio: explorar o efeito de número de SNPs (explorar sorteio!)
+
+Leitura opcional: Artigo Alexander
 
 ## Dia 6
 
