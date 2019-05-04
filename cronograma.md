@@ -85,9 +85,9 @@ Prática:
 **Leitura prévia:** Hunt Fraser 
 
 1. Associação: de GWAS até traços de interesse evolutivo, expressão tb
-Análise por chunks?
-Retomar PCA
-Ver se há eQTL associado com variante de adaptação.
-Mapeamento de eQTLs
-Expressão e seleção
+2. Análise por chunks?
+3. Retomar PCA
+4. Ver se há eQTL associado com variante de adaptação.
+5. Mapeamento de eQTLs
+6. Expressão e seleção
 
