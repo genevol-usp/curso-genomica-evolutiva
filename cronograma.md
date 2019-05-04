@@ -1,7 +1,7 @@
 # Cronograma BIO 5789 -- Genômica Evolutiva
 
 
-## Dia 1
+## Dia 1: Dados Genômicos, diversidade genética e modelo de Hardy-Weinberg
 
 **Leitura prévia:** "Hardy-Weinberg Theorem". Hastings, A. (2001) Hardy-Weinberg theorem.In Encyclopedia of Life Sciences. MacMillan Publishing. (No drive da disciplina)
 
@@ -24,7 +24,7 @@
 
 Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007/s00439-017-1786-7) (para discussão na aula seguinte, no drive da disciplina) 
 
-## Dia 2
+## Dia 2: Deriva genética, tanho efetivo populacional e teoria de coalescência
 
 **Leitura prévia:** Hedrick (2013), "Genetic Drift" _In_ ["The Princeton Guide to Evolution", Ed. Losos, J.](https://press.princeton.edu/titles/10100.html) (No drive da disciplina)
 
@@ -44,7 +44,7 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
  
  **Leitura pós-aula:** [Prugnolle (2005)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1800886/), um pequeno exemplo sobre os efeitos de deriva (no drive da disciplina).
 
-## Dia 3
+## Dia 3: Modelo básico de seleção natural
 
 **Leitura prévia:** - Holsinger, K. " Theory of Selection in Populations" _In_ ["The Princeton Guide to Evolution", Ed. Losos, J.](https://press.princeton.edu/titles/10100.html) (No drive da disciplina)
 
@@ -61,7 +61,7 @@ Annu Rev Genet. 2013;47:97-120. doi: 10.1146/annurev-genet-111212-133526. Review
 PubMed PMID: 24274750. (no drive da disciplina)
 
 
-## Dia 4
+## Dia 4: Detecção de seleção natural
 
 **Leitura prévia:**
 
@@ -72,7 +72,7 @@ PubMed PMID: 24274750. (no drive da disciplina)
 Manhã: Teoria sobre métodos inter-específicos de detecção de seleção
 Tarde: continuação das práticas de seleção natural.
 
-## Dia 5
+## Dia 5: Estrutura populacional e reconstrução demográfica a partir de dados genômicos
 
 **Leitura prévia:** Ramashandran (restante do capítulo)
 
@@ -85,7 +85,7 @@ Prática:
 
 **Leitura opcional:** Artigo [Alexander et al. (2009)](https://www.ncbi.nlm.nih.gov/pubmed/19648217), descrevendo o Admixture.
 
-## Dia 6
+## Dia 6: Mapeanto genes que influenciam traços quantitativos
 
 **Leitura prévia:** 
 
