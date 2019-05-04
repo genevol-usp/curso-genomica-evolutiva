@@ -1,25 +1,26 @@
-Cronograma
+# Cronograma BOI 5789 -- Genômica Evolutiva
 
 
 ## Dia 1
 
-Leitura prévia:
+**Leitura prévia:
+
 Roteiro para introduzir R
 Texto de Alan Hastings: "Hardy-Weinberg Theorem"
 
-Teórica
+**Teórica
 
 1. Apresentação do curso, motivação para análises genômicas
 2. Descrição básica de variabilidade populacional (frequências alélicas e genotípicas, heterozigose).
 3. Modelo básico de populações: Hardy-Weinberg
 4. Relação de Hardy-Weinberg com processos de seleção, migração, endogamia (exercícios em sala)
 
-Prática 1.
+**Prática Parte 1.
 
 1. Exploração de diferentes formatos de dados genômicos: fastq, BAM, vcf.
 2. Manipulação de dados usand vcftools, geração de base de dados para cromossomo 22 YRI, como exemplo.
 
-Prática 2.
+**Prática Parte 2.
 
 1. Introdução ao uso do R
 2. Uso do R para testar desvios de HW em dados do cromossomo 22 YRI
@@ -28,8 +29,8 @@ Leitura pós aula: Graffelman & Weir (para discussão na aula seguinte)
 
 ## Dia 2
 
-Leitura prévia: Texto de Hedrick: "Genetic Drift"
-Leitura prévia? Texto Ramashandran
+**Leitura prévia:** Texto de Hedrick: "Genetic Drift"
+**Leitura prévia:** Texto Ramashandran
 
 1. Conceitos básicos de deriva genética
 2. Derivando algumas expressões básicas: declínio de H com o tempo, probabilidade de fixação.
@@ -43,12 +44,11 @@ Leitura prévia? Texto Ramashandran
  4. Introdução à teoria da coalescência (incluir pi, S e D)
  5. Simulação coalescente simples em R
  
- Leitura pós-aula: Prugnolle (2005) como pequeno exemplo
+ **Leitura pós-aula:** Prugnolle (2005) como pequeno exemplo.
 
 ## Dia 3
 
-Leitura prévia: Texto de Holsinger "Theory of Selection in Populations"
-Petrov
+**Leitura prévia:** Texto de Holsinger "Theory of Selection in Populations"
 
 1. Conceitos básicos de seleção e parametrização.
 2. Simulação de seleção em R
@@ -57,12 +57,8 @@ Petrov
 4. Testes de seleção intra-específicos (teórica)
 5. Prática
 
-Leitura pós-aula: Vitti como revisão (opcional de consulta)
-Leitura pós-aula: da Africa ou EPAS1
-
-Happy Hour!
-
-[FINAL DE SEMANA]
+**Leitura pós-aula:** Vitti como revisão (opcional de consulta)
+**Leitura pós-aula:** da Africa ou EPAS1
 
 ## Dia 4
 Leitura prévia: Petrov
