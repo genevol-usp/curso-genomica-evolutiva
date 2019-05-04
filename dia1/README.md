@@ -1,4 +1,4 @@
-Roteiro
+Roteiro: Dados Genômicos, Diversidade Genética e Equilíbrio de Hardy-Weinberg
 ================
 
 Os objetivos desta atividade prática são os seguintes:
@@ -226,8 +226,7 @@ Para começar, vamos nos lembrar que, assumindo HWE, temos uma expectativa teór
 ``` bash
 Rscript parse_genocounts.R
 ```
-
-Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg.
+Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg. Uma dica: sob HW, o gráfico que desejamos é uma relação entre a frequência alélica e a dos genótipos. E ele é o logotipo do nosso laboratório. Dê uma olhada: https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/logo.jpg
 
 Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças.
 
@@ -238,7 +237,7 @@ Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversida
 
 Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
 
-Leitura
+Leitura pós-aula
 =======
 
-Graffelman and Weir (2017)
+Tendo obtido esses resultados para Hardy-Weinberg, leia o artigo de Graffelman and Weir (2017) e tente identificar nele respostas para os resultados obtidos.
