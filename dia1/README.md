@@ -1,4 +1,4 @@
-Explorando dados genômicos: diversidade e Hardy-Weinberg
+Roteiro
 ================
 
 Os objetivos desta atividade prática são os seguintes:
@@ -218,8 +218,6 @@ Podemos fazer isso simplesmente examinando como os p-values se distribuem ao lon
 
 Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos investigá-la mais a fundo.
 
-![](README_files/figure-markdown_github/chr21_hwe_p-1.png)
-
 Como as frequências genotípicas diferem das esperadas?
 ------------------------------------------------------
 
@@ -238,11 +236,9 @@ Como a diversidade genética se distribui ao longo do Chr21
 
 Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversidade genética. Uma forma de estimar heterozigose para dados moleculares é através da "diversidade nucleotídica" (abreviada pela letra grega `π`), que é dada pelo número médio de diferenças entre pares de sequências. Uma das análises que fizemos gerou estimativas de `π` para janelas de 50kb ao longo do cromossomo 21. Examine esses dados, veja qual o `π` médio, e discuta o que ele lhe diz sobre a diversidade genética humana.
 
-![](README_files/figure-markdown_github/chr21_pi-1.png)
-
 Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
 
 Leitura
 =======
 
-Para completarmos a discussão a respeito de desvios de HW em populações humanas, vamos analisar os nossos achados para o cromossomo 21 consultando o artigo de Graffelman and Weir (2017). Quem tiver tempo, explore o artigo todo. Mas para nossos propósitos, é possível ir direto às seções que tratam dos padrões encontrados para o cromossomo 21.
+Graffelman and Weir (2017)
