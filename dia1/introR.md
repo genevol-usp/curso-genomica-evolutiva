@@ -1,7 +1,5 @@
 Introdução a R
 ================
-Vitor Aguiar
-May 6, 2019
 
 Por que?
 ========
@@ -27,15 +25,15 @@ Por que R?
     -   manipulação de dados
     -   biologia!
 -   Análise exploratória interativa
--   Acessível a usuário iniciantes e avançados
+-   Acessível a usuário iniciantes
 
 Desvantagens: pode ser lento e consumir muita memória
 
-demo: Rstudio
+Demo: Rstudio
 =============
 
-Demo: environment and assignment
-================================
+Demo: environment e assignment
+==============================
 
 ``` r
 ls()
@@ -55,20 +53,17 @@ Estruturas de dados
 
 ------------------------------------------------------------------------
 
-| dimensão |   homogêneo   | heterogêneo |
-|:--------:|:-------------:|:-----------:|
-|    1d    | atomic vector |     List    |
-|    2d    |     matrix    |  data frame |
+| dimensão | homogêneo | heterogêneo |
+|:--------:|:---------:|:-----------:|
+|    1d    |   vetor   |    lista    |
+|    2d    |   matriz  |  data frame |
 
 **funções contrutoras:**
 
 -   c()
--   vector()
 -   list()
 -   matrix()
 -   data.frame()
--   array()
--   factor()
 
 Tipos
 -----
@@ -77,8 +72,6 @@ Tipos
 -   numeric
 -   character
 -   logical
--   complex
--   raw
 
 Valores especiais
 -----------------
@@ -89,128 +82,97 @@ Valores especiais
 -   Inf
 -   TRUE and FALSE
 
-demo
+Demo
 ====
 
 ``` r
 # 1D
 
 ## homogeneous: atomic vector
-v <- 10
-v
-class(v)
+vec <- 10
+vec
+class(vec)
 
-v <- 1:100
-v
-class(v)
+vec <- 1:10
+vec
+class(vec)
+typeof(vec)
 
-typeof(v)
+vec <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+vec
+typeof(vec)
 
-v <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-v
-is.integer(v)
-typeof(v)
-
-v <- c("a", "c", "t", "g")
-v
-typeof(v)
+vec <- c("a", "c", "t", "g")
+vec
+typeof(vec)
 
 ## factor
-f <- factor(c("a", "b", "b", "a", "b", "a", "b", "a"))
-f
-typeof(f)
-class(f)
+fac <- factor(c("a", "c", "t", "g"))
+fac
+typeof(fac)
+class(fac)
 
 ## heterogeneous: lists
-
-l <- list(a = 1:10, 
+lis <- list(a = 1:10, 
           b = c("a", "t", "c", "g"), 
           c = data.frame(var1 = 1:3, var2 = c("a", "b", "c")))
 
-l
-typeof(l)
+lis
 
 # 2D
 
 ## matrix
 
-m <- matrix(c("a", "b", 1, 2), nrow = 2)
-m
-typeof(m)
+mat <- matrix(c("a", "b", 1, 2), nrow = 2)
+mat
 
 ## data frame
 
-df <- data.frame(letter = c("a", "b", "c"), number = 1:3)
-df
-typeof(df)
-
-list(letter = c("a", "b", "c"), number = 1:3)
-as.data.frame(list(letter = c("a", "b", "c"), number = 1:3))
+dat <- data.frame(letter = c("a", "b", "c"), number = 1:3)
+dat
 
 # attributes
 
-length(v)
-length(l)
-dim(m)
-dim(df)
-dim(a)
+length(vec)
+length(lis)
+dim(mat)
+dim(dat)
 
-names(v)
-names(v) <- c("nt1", "nt2", "nt3", "nt4")
-v
-names(v)
-
-rownames(m) <- c("ind1", "ind2")
-colnames(m) <- c("letter", "number")
-#or:
-dimnames(m) <- list(c("ind1", "ind2"), c("letter", "number"))
-
-# str()
-str(v)
-str(df)
-
-summary(df)
+names(vec)
+names(vec) <- c("nt1", "nt2", "nt3", "nt4")
+vec
 ```
 
 demo: subsetting
 ================
 
 ``` r
-v
-v[1]
-v[c(1, 4)]
-v[-1]
-v[c(TRUE, FALSE, TRUE, FALSE)]
-v[v > "c"]
+vec
+vec[1]
+vec[c(1, 4)]
+vec[-1]
+vec[c(TRUE, FALSE, TRUE, FALSE)]
+vec[vec > "c"]
 
-names(v) <- c("nt1", "nt2", "nt3", "nt4")
-v["nt3"]
+vec["nt3"]
 
-l
+lis
 
-l[1]
-l["a"]
-class(l[1])
-l[[1]]
-class(l[[1]])
+lis[1]
+lis["a"]
+lis[[1]]
 
-l[[3]][[1]]
+lis[[1]][[1]]
 
-l$a
+lis$a
 
-df
+dat
 
-df$letter
+dat$letter
 
-m
-m[1, 1]
-m[2, 1:2]
-m[, 1]
-m[-1, ]
-
-df
-df[2, 1:2]
-df[[2]]
+dat
+dat[2, 1:2]
+dat[[2]]
 ```
 
 Operadores e funções
@@ -225,9 +187,6 @@ x - y
 x * y
 x / y
 x ^ y
-x %% y
-x %/% y
-x %*% y
 x == y
 x != y  
 x > y
@@ -245,22 +204,24 @@ Funções
 -------
 
 ``` r
-fun <- function(x) do_something
+fun <- function(x) {
+    do_something
+}
 ```
 
 Funções comuns incluídas no R
 -----------------------------
 
-|          |           |          |
-|:--------:|:---------:|:--------:|
-|   sum()  |   str()   |  rnorm() |
-|   log()  | summary() | rbinom() |
-|   exp()  |    lm()   |  runif() |
-|  mean()  |  table()  |  rbeta() |
-| median() |   head()  | rgamma() |
-|   var()  |   tail()  | sample() |
-|   sd()   |   dim()   |   rep()  |
-|  sqrt()  |  subset() |          |
+|        |         |        |
+|:------:|:-------:|:------:|
+|   sum  |   str   |  rnorm |
+|   log  | summary | rbinom |
+|   exp  |    lm   |  runif |
+|  mean  |  table  |  rbeta |
+| median |   head  | rgamma |
+|   var  |   tail  | sample |
+|   sd   |   dim   |   rep  |
+|  sqrt  |  subset |        |
 
 Obtendo ajuda
 -------------
@@ -276,7 +237,7 @@ help(mean)
 
 apropos("mean")
 
-help(package="dplyr")
+help(package = "dplyr")
 ```
 
 Ajuda na internet internet
@@ -292,7 +253,6 @@ apply
 -   lapply
 -   sapply
 -   tapply
--   mapply
 
 ``` r
 sapply(iris[1:4], mean)
@@ -305,7 +265,9 @@ Estruturas de controle de fluxo
 -   while
 
 ``` r
-for (iterator in times) do something
+for (i in N) {
+    do something
+}
 ```
 
 -   if
@@ -313,12 +275,12 @@ for (iterator in times) do something
 
 ``` r
 x <- 10
-if (x > 0) y <- 1 else y <- 0
-y
+if (x > 0) {
+    y <- 1
+} else {
+    y <- 0
+}
 ```
-
--   next
--   stop
 
 Vetorização
 -----------
@@ -331,14 +293,14 @@ Vetorização
 Ler e salvar dados
 ==================
 
-|     READ     |     WRITE     |
-|:------------:|:-------------:|
-| read.table() | write.table() |
-|  read.csv()  |  write.csv()  |
-|  read.csv2() |  write.csv2() |
-|  readLines() |  writeLines() |
+|     LER    |    SALVAR   |
+|:----------:|:-----------:|
+| read.table | write.table |
+|  read.csv  |  write.csv  |
+|  read.csv2 |  write.csv2 |
+|  readLines |  writeLines |
 
-Graficos
+Gráficos
 ========
 
 -   plot
@@ -357,7 +319,15 @@ model <- lm(Petal.Length~Sepal.Length, data = iris)
 plot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species, pch = 19, 
      xlab = "Sepal Length", ylab = "Petal Length")
 lines(iris$Sepal.Length, fitted(model), col = "blue")
-legend(7, 3, unique(iris$Species), col = 1:length(iris$Species), pch = 19)
+legend(7, 4, unique(iris$Species), col = 1:length(iris$Species), pch = 19)
+
+# Save plot
+png("./irisplot.png", height = 10, width = 15, units = "cm", res = 150)
+plot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species, pch = 19, 
+     xlab = "Sepal Length", ylab = "Petal Length")
+lines(iris$Sepal.Length, fitted(model), col = "blue")
+legend(7, 4, unique(iris$Species), col = 1:length(iris$Species), pch = 19)
+dev.off()
 ```
 
 Pacotes

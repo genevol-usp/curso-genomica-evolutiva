@@ -1,2 +1,5 @@
-# curso-genomica-evolutiva
-Repositório para material para curso de genômica evolutiva.
+# Curso de Genômica Evolutiva
+
+#### Instituto de Biociências, Universidade de São Paulo.
+
+<img src="logo.jpg" alt="drawing" width="200"/>
