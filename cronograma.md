@@ -5,8 +5,7 @@
 
 **Leitura prévia:**
 
-Roteiro para introduzir R
-Texto de Alan Hastings: "Hardy-Weinberg Theorem"
+"Hardy-Weinberg Theorem". Hastings, A. (2001) Hardy-Weinberg theorem.In Encyclopedia of Life Sciences. MacMillan Publishing. (No drive da disciplina)
 
 **Teórica**
 
@@ -25,12 +24,12 @@ Texto de Alan Hastings: "Hardy-Weinberg Theorem"
 1. Introdução ao uso do R
 2. Uso do R para testar desvios de HW em dados do cromossomo 22 YRI
 
-Leitura pós aula: Graffelman & Weir (para discussão na aula seguinte)
+Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007/s00439-017-1786-7) (para discussão na aula seguinte, no drive da disciplina) 
 
 ## Dia 2
 
-**Leitura prévia:** Texto de Hedrick: "Genetic Drift"
-**Leitura prévia:** Texto Ramashandran
+**Leitura prévia:** Hedrick (2013), "Genetic Drift" _In_ ["The Princeton Guide to Evolution", Ed. Losos, J.](https://press.princeton.edu/titles/10100.html) (No drive da disciplina)
+**Leitura prévia:** Ramachandran (2010), "Genetics and genomics of human population structure" _In_ M.R. Speicher et al. (eds.), Vogel and Motulsky’s Human Genetics: Problems and Approaches, 589 DOI 10.1007/978-3-540-37654-5_20, © Springer-Verlag Berlin Heidelberg.  (No drive da disciplina)
 
 1. Conceitos básicos de deriva genética
 2. Derivando algumas expressões básicas: declínio de H com o tempo, probabilidade de fixação.
