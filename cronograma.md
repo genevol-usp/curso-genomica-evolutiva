@@ -13,7 +13,7 @@ Texto de Alan Hastings: "Hardy-Weinberg Theorem"
 1. Apresentação do curso, motivação para análises genômicas
 2. Descrição básica de variabilidade populacional (frequências alélicas e genotípicas, heterozigose).
 3. Modelo básico de populações: Hardy-Weinberg
-4. Relação de Hardy-Weinberg com processos de seleção, migração, endogamia (exercícios em sala)
+4. Relação de Hardy-Weinberg com processos de seleção, migração, endogamia [exercícios em sala](hwp5789.pdf)
 
 **Prática Parte 1.**
 
