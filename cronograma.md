@@ -1,26 +1,26 @@
-# Cronograma BOI 5789 -- Genômica Evolutiva
+# Cronograma BIO 5789 -- Genômica Evolutiva
 
 
 ## Dia 1
 
-**Leitura prévia:
+**Leitura prévia:**
 
 Roteiro para introduzir R
 Texto de Alan Hastings: "Hardy-Weinberg Theorem"
 
-**Teórica
+**Teórica**
 
 1. Apresentação do curso, motivação para análises genômicas
 2. Descrição básica de variabilidade populacional (frequências alélicas e genotípicas, heterozigose).
 3. Modelo básico de populações: Hardy-Weinberg
 4. Relação de Hardy-Weinberg com processos de seleção, migração, endogamia (exercícios em sala)
 
-**Prática Parte 1.
+**Prática Parte 1.**
 
 1. Exploração de diferentes formatos de dados genômicos: fastq, BAM, vcf.
 2. Manipulação de dados usand vcftools, geração de base de dados para cromossomo 22 YRI, como exemplo.
 
-**Prática Parte 2.
+**Prática Parte 2.**
 
 1. Introdução ao uso do R
 2. Uso do R para testar desvios de HW em dados do cromossomo 22 YRI
@@ -69,7 +69,7 @@ Tarde: continuação das práticas
 
 ## Dia 5
 
-Leitura prévia: Restante do Ramashandran
+**Leitura prévia:** Restante do Ramashandran
 
 Demografia
 Estrutura populacional
@@ -78,11 +78,11 @@ Prática:
 1. Admixture -> brincar com valores de K, alterar tamanho dos parentais, 
 2. PCA -> desafio: explorar o efeito de número de SNPs (explorar sorteio!)
 
-Leitura opcional: Artigo Alexander
+**Leitura opcional:** Artigo Alexander
 
 ## Dia 6
 
-Leitura prévia: Hunt Fraser 
+**Leitura prévia:** Hunt Fraser 
 
 1. Associação: de GWAS até traços de interesse evolutivo, expressão tb
 Análise por chunks?
