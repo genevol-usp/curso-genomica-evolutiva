@@ -24,4 +24,4 @@ Exercício 2. Depois de discutirmos algumas estratégias de pseudcódigo, vamos 
 - Faça gráficos sobre a trajetória da variância das frequências alélicas (ou seja, a dispersão das simulações ao redor da média). 
 - Até aqui, fizemos simulações com populações de tamanho constante. Introduza uma variação no tamanho populacional, simulando um gargalo. Usando as fórmulas para o tamanho efetivo populacional, veja se a perda de diversidade observada se encaixa com aquela esperada de acordo com o tamanho efetivo.
 
-E aqui vai um teste de fórmula ![](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/CodeCogsEqn.gif), uma bem simples.
+E aqui vai um teste de fórmula ![](CodeCogsEqn.gif), uma bem simples.
