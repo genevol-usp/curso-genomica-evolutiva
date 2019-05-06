@@ -4,7 +4,7 @@ Roteiro: Dados Genômicos, Diversidade Genética e Equilíbrio de Hardy-Weinberg
 Os objetivos desta atividade prática são os seguintes:
 
 -   Permitir um primeiro contato com diferentes formatos de armazenamento de dados genômicos.
--   Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes project.
+-   Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes Project.
 -   Explorar dados de diversidade genética e frequências genotípicas e fazer interpretações de processos evolutivos que explicam os padrões encontrados.
 
 Formato de dados
@@ -207,7 +207,7 @@ Usando vcftools para fazer cálculo de estatísticas populacionais
     # calcular estastítica pi por janela de 50kb
     vcftools --vcf $yrivcf --window-pi 50000 --out $out 
 
-De posso dessas análises, vamos agora explorar os achados e interpretá-los.
+De posse dessas análises, vamos agora explorar os achados e interpretá-los.
 
 Há desvios de HW no cromossomo 21?
 ----------------------------------
