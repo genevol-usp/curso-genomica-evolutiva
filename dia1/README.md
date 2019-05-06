@@ -233,6 +233,14 @@ Agora vamos gerar os gráficos, no R, para as frequências genotípicas observad
 
 Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças.
 
+### Crh21 inteiro
+
+![](README_files/figure-markdown_github/chr21_whole-1.png)
+
+### Chr21: região com alto desvio
+
+### Chr21: região com baixo desvio
+
 Como a diversidade genética se distribui ao longo do Chr21
 ----------------------------------------------------------
 
@@ -246,11 +254,3 @@ Leitura pós-aula
 ================
 
 Tendo obtido esses resultados para Hardy-Weinberg, leia o artigo de Graffelman and Weir (2017) e tente identificar nele respostas para os resultados obtidos.
-
-### Crh21 inteiro
-
-![](README_files/figure-markdown_github/chr21_whole-1.png)
-
-### Chr21: região com alto desvio
-
-### Chr21: região com baixo desvio
