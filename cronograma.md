@@ -15,12 +15,12 @@
 **Prática Parte 1.**
 
 1. Exploração de diferentes formatos de dados genômicos: fastq, BAM, vcf.
-2. Manipulação de dados usand vcftools, geração de base de dados para cromossomo 22 YRI, como exemplo.
+2. Manipulação de dados usand vcftools, geração de base de dados para cromossomo 21 YRI, como exemplo.
 
 **Prática Parte 2.**
 
 1. Introdução ao uso do R
-2. Uso do R para testar desvios de HW em dados do cromossomo 22 YRI
+2. Uso do R para testar desvios de HW em dados do cromossomo 21 YRI
 
 Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007/s00439-017-1786-7) (para discussão na aula seguinte, no drive da disciplina) 
 
