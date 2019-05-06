@@ -253,8 +253,4 @@ Tendo obtido esses resultados para Hardy-Weinberg, leia o artigo de Graffelman a
 
 ### Chr21: região com alto desvio
 
-![](README_files/figure-markdown_github/chr21_short-1.png)
-
 ### Chr21: região com baixo desvio
-
-![](README_files/figure-markdown_github/chr21_long-1.png)
