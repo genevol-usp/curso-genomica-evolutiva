@@ -78,6 +78,7 @@ Tarde: continuação das práticas de seleção natural.
 
 1. Inferência de demografia a partir de dados genômicos
 2. Análise de estrutura populacional
+3. Ancestralidade genética e miscigenação populacional
 
 Prática:
 1. Uso do programa Admixture
