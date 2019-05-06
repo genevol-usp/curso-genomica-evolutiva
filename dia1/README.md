@@ -4,7 +4,7 @@ Roteiro: Dados Genômicos, Diversidade Genética e Equilíbrio de Hardy-Weinberg
 Os objetivos desta atividade prática são os seguintes:
 
 -   Permitir um primeiro contato com diferentes formatos de armazenamento de dados genômicos.
--   Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes Project.
+-   Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes project.
 -   Explorar dados de diversidade genética e frequências genotípicas e fazer interpretações de processos evolutivos que explicam os padrões encontrados.
 
 Formato de dados
@@ -207,7 +207,7 @@ Usando vcftools para fazer cálculo de estatísticas populacionais
     # calcular estastítica pi por janela de 50kb
     vcftools --vcf $yrivcf --window-pi 50000 --out $out 
 
-De posse dessas análises, vamos agora explorar os achados e interpretá-los.
+De posso dessas análises, vamos agora explorar os achados e interpretá-los.
 
 Há desvios de HW no cromossomo 21?
 ----------------------------------
@@ -218,6 +218,8 @@ Podemos fazer isso simplesmente examinando como os p-values se distribuem ao lon
 
 Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos investigá-la mais a fundo.
 
+![](README_files/figure-markdown_github/chr21_hwe_p-1.png)
+
 Como as frequências genotípicas diferem das esperadas?
 ------------------------------------------------------
 
@@ -226,7 +228,8 @@ Para começar, vamos nos lembrar que, assumindo HWE, temos uma expectativa teór
 ``` bash
 Rscript parse_genocounts.R
 ```
-Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg. Uma dica: sob HW, o gráfico que desejamos é uma relação entre a frequência alélica e a dos genótipos. E ele é o logotipo do nosso laboratório. Dê uma olhada: https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/logo.jpg
+
+Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg. Uma dica: sob HW, o gráfico que desejamos é uma relação entre a frequência alélica e a dos genótipos. E ele é o logotipo do nosso laboratório. Dê uma olhada: <https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/logo.jpg>
 
 Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças.
 
@@ -235,9 +238,23 @@ Como a diversidade genética se distribui ao longo do Chr21
 
 Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversidade genética. Uma forma de estimar heterozigose para dados moleculares é através da "diversidade nucleotídica" (abreviada pela letra grega `π`), que é dada pelo número médio de diferenças entre pares de sequências. Uma das análises que fizemos gerou estimativas de `π` para janelas de 50kb ao longo do cromossomo 21. Examine esses dados, veja qual o `π` médio, e discuta o que ele lhe diz sobre a diversidade genética humana.
 
+![](README_files/figure-markdown_github/chr21_pi-1.png)
+
 Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
 
 Leitura pós-aula
-=======
+================
 
 Tendo obtido esses resultados para Hardy-Weinberg, leia o artigo de Graffelman and Weir (2017) e tente identificar nele respostas para os resultados obtidos.
+
+### Crh21 inteiro
+
+![](README_files/figure-markdown_github/chr21_whole-1.png)
+
+### Chr21: região com alto desvio
+
+![](README_files/figure-markdown_github/chr21_short-1.png)
+
+### Chr21: região com baixo desvio
+
+![](README_files/figure-markdown_github/chr21_long-1.png)
