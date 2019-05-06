@@ -357,3 +357,8 @@ Boas práticas
 -   Não salve seu histórico nem seu environment
     -   rode de novo a análise usando script e dados
 -   Use um sistema de controle de versão (git)
+
+Responder:
+----------
+
+[Google Form Intro R](https://forms.gle/xuVcs8LmyArrNcRR7)
