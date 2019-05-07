@@ -1,19 +1,19 @@
 # Genetic Drift
 
-# Number of individuals:
-N <- 1000
-
 # Number of generations
 ngens <- 2000
+
+# Number of individuals:
+N <- 1000
 
 # Population of individuals '0' or '1':
 pop <- rep(0:1, each = N/2)
 
 #vector with the frequencies of allele 0 in 2000 generations 
-p <- numeric(ngens)
+freqs <- numeric(ngens)
 
 # 1st element of vector 'p' will be the allele frequency in parent generation:
-p[1] <- mean(pop == 0)
+freqs[1] <- mean(pop == 0)
 
 # Now we have to calculate the allele frequencies in the next generations.
 # Let's use a 'for loop' to calculate the frequency in each generation and
@@ -24,10 +24,10 @@ for(i in 2:ngens) {
     pop <- sample(pop, replace = TRUE)
     
     # allele frequency in the ith generation:
-    p[i] <- mean(pop == 0)
+    freqs[i] <- mean(pop == 0)
 }
 
 # Plot
-plot(p, type = "l", ylim = c(0, 1),
+plot(freqs, type = "l", ylim = c(0, 1),
      xlab = "generations", ylab = "frequency", 
      main = "allele frequency change")
