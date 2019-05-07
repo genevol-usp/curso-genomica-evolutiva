@@ -31,23 +31,17 @@ for(i in 2:ngens) {
     # allele frequency in the ith generation:
     freqs[i] <- mean(pop == 0)
     
-    # heterozigosity in the ith generation
-    het[i] <- het[i - 1] * (1 - (1/(N[i - 1])))
+    
+    
+######### 
+# Nesse trecho do código, nós usamos as fórmulas vistas em aula para documentar
+# como esperamos que seja a perda de diversidade genética nessa popuplação com N variável.
+    
+# Essa porção do código calcula como H vai mudando, sempre atualizando o N para os valores especificados lá no início.
+het[i] <- het[i - 1] * (1 - (1/(N[i - 1])))
 }
-
-plot(freqs, type = "l", ylim = c(0, 1),
-     xlab = "generations", ylab = "frequency", 
-     main = "allele frequency change")
 
 plot(het, type = "l", ylim = c(0, 1),
      xlab = "generations", ylab = "H", 
      main = "Heterozigosity change")
 
-# Ne
-ne <- (sum(N^-1) / length(N)) ^-1
-
-# Theoretical H change
-H_t <- het[1] * (1 - (1/ne))^(1:ngens)
-
-# add theoretical line to the plot of H
-lines(H_t, col = "red", lty = 2)
