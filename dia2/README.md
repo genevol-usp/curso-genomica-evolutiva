@@ -53,7 +53,7 @@ A forma mais habitual de se ilustrar o processo de deriva envolve a trajetória 
 
 **Questão 5.** Nós incluímos no código também um cálculo de como a taxa de heterozigose (H) muda ao longo do tempo, tanto para populações individuais, como para a média do conjunto de populações. Sua tarefa é investigar se o declínio de H ao longo do tempo se dá de acordo com a expectativa teórica. Para fazer isso, relembre a equação a ser usado e inclua-a no gráfico para a trajetória simulada de H.
 
-## Deriva genética para um lócus bialélico
+## Deriva genética numa população com tamanho variável: o efeito gargalo
 
 
 - Até aqui, fizemos simulações com populações de tamanho constante. Introduza uma variação no tamanho populacional, simulando um gargalo. Usando as fórmulas para o tamanho efetivo populacional, veja se a perda de diversidade observada se encaixa com aquela esperada de acordo com o tamanho efetivo.
