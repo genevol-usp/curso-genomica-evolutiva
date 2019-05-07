@@ -13,7 +13,7 @@ pop <- seq(1:(2*N))
 ibd <- numeric(ngens)
 
 # 1st element of vector 'p' will be the IBD prob  in parent generation:
-ibd[1] <- (table(pop)/(2*N))^2
+ibd[1] <- sum((table(pop)/(2*N))^2)
 
 # Now we have to calculate the allele frequencies in the next generations.
 # Let's use a 'for loop' to calculate the frequency in each generation and
@@ -24,7 +24,7 @@ for(i in 2:ngens) {
   pop <- sample(pop, replace = TRUE)
   
   # allele frequency in the ith generation:
-  ibd[i] <- (table(pop)/(2*N))^2
+  ibd[i] <- sum((table(pop)/(2*N))^2)
 }
 
 # Plot
