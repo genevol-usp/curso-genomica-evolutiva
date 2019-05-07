@@ -1,4 +1,4 @@
-Roteiro para plot HWE
+Roteiro para gráfico HWE
 ================
 
 Importar os dados de contagens genotípicas para o R. Lembre que essas contagens foram geradas pelo comando `vcftools --hardy` e parseadas pelo script `parse_genocounts.R`.
@@ -79,3 +79,20 @@ lines(f, 2 * f * (1-f), col = "blue")
 ```
 
 ![](roteiro_plot_hwe_files/figure-markdown_github/unnamed-chunk-14-1.png)
+
+Desafio:
+========
+
+O gráfico acima mostra o padrão de desvios de HWE ao longo de todo o cromossomo 21. Lembre que durante a aula, quando olhamos para o p-valor do teste de HWE ao longo desse cromossomo, vimos um padrão diferente para o braço curto e o braço longo do cromossomo.
+
+1.  Crie 2 versões do data.frame `genos` acima, uma para o braço curto e outra para o braço longo.
+2.  Replique o gráfico acima para cada braço do cromossomo.
+3.  Salve os gráficos com o comando `png`:
+
+``` r
+png("nome_do_arquivo.png", width = 12, height = 8, units = "cm", res = 300)
+CODIGO DO GRAFICO AQUI
+dev.off()
+```
+
+Como o padrão observado aqui para cada braço do cromossomo se relaciona ao [gráfico de p-valores visto antes](https://github.com/genevol-usp/curso-genomica-evolutiva/tree/master/dia1#há-desvios-de-hw-no-cromossomo-21)?
