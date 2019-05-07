@@ -5,14 +5,13 @@ t <- 1
 
 while ( var(dat) != 0) {
   dat <- sample(dat, replace=TRUE)
-  t = t+1
-  }
+  t <- t+1
+}
 print(t)
 
 
-
 # Agore repetindo 100 vezes e armazenando
-fix <- numeric()
+fix <- numeric(100)
 
 for(i in 1:100) {
   
@@ -21,7 +20,7 @@ for(i in 1:100) {
   
   while ( var(dat) != 0) {
     dat <- sample(dat, replace=TRUE)
-    t = t+1
+    t <- t+1
   }
   fix[i] <- t
 }
