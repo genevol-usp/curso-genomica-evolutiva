@@ -85,7 +85,7 @@ Desafio:
 
 O gráfico acima mostra o padrão de desvios de HWE ao longo de todo o cromossomo 21. Lembre que durante a aula, quando olhamos para o p-valor do teste de HWE ao longo desse cromossomo, vimos um padrão diferente para o braço curto e o braço longo do cromossomo.
 
-1.  Crie 2 versões do data.frame `genos` acima, uma para o braço curto e outra para o braço longo.
+1.  Crie 2 versões do data.frame `genos` acima, uma para o braço curto e outra para o braço longo (lembre que o centrômero parecia estar mais ou menos na posição 12Mb).
 2.  Replique o gráfico acima para cada braço do cromossomo.
 3.  Salve os gráficos com o comando `png`:
 
