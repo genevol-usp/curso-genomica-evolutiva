@@ -16,6 +16,7 @@ população.
 Vimos em aula expressões para o aumento da probabilidade de identidade por descedência e declínio de heterozigose:
 
 F_t = 1 - (1 - 1/2N)^t
+
 H_t = H0 (1 - 1/2N)^t
 
 Uma outra forma de estudar a deriva envolve fazer simulações desse processo no
@@ -46,10 +47,15 @@ O conceito de IBD é fundamental, pois nos ilustra que, invevitavelmente, com o 
 
 ## Deriva genética para um lócus bialélico
 
-- Faça gráficos do processo de deriva.
-- Faça gráficos de como a diversidade genética, medida por "H", varia ao longo do tempo. Lembre que o ideal é você estimar a trajetória média de H para várias simulações.
-- Compare a trajetória de H com aquela esperada pela teoria.
-- Faça gráficos sobre a trajetória da variância das frequências alélicas (ou seja, a dispersão das simulações ao redor da média). 
+A forma mais habitual de se ilustrar o processo de deriva envolve a trajetória temporal para um lócus bialélico. São os gráficos comumente usados em livro texto, e presentes no capítulo de Hedrick, que vocês leram. Use o código presente no arquivo [drift_single_pop.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_single_pop.R) para entender como se gera tal gráfico, e cerfitique-se que compreender como cada estapa está sendo feito.
+
+**Questão 4.** Usando o arquivo [drift_multiple_pops.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_multiple_pops.R) gere  gráficos que ilustram o processo de deriva, variando o valor de N e as frequências iniciais, e veja o efeito sobre as trajetórias temporais e probabilidades de fixação. Repetindo as simulações um grande número de vezes, certifique-se que de fato a probablidade de fixação é dada pela frequência inicial do alelo.
+
+**Questão 5.** Nós incluímos no código também um cálculo de como a taxa de heterozigose (H) muda ao longo do tempo, tanto para populações individuais, como para a média do conjunto de populações. Sua tarefa é investigar se o declínio de H ao longo do tempo se dá de acordo com a expectativa teórica. Para fazer isso, relembre a equação a ser usado e inclua-a no gráfico para a trajetória simulada de H.
+
+## Deriva genética para um lócus bialélico
+
+
 - Até aqui, fizemos simulações com populações de tamanho constante. Introduza uma variação no tamanho populacional, simulando um gargalo. Usando as fórmulas para o tamanho efetivo populacional, veja se a perda de diversidade observada se encaixa com aquela esperada de acordo com o tamanho efetivo.
 
 E aqui vai um teste de fórmula ![](CodeCogsEqn.gif), uma bem simples.
