@@ -27,7 +27,7 @@ completamente controladas pelo pesquisador.
 
 ## Simulando o aumento de IBD com o tempo: uma única população
 
-Vamos simular a mudança, ao longo do tempo,  da probabilidade de identidade por descedência (às vezes chamada de F_ibd, do "identical by descent"). Assumindo que há uma "população de referência", isso equivale a perguntar qual a probabilidade de amostrar duas cópias gênicas que descendem de uma mesma cópia gênica na geração original?
+Vamos simular a mudança, ao longo do tempo, da probabilidade de identidade por descedência (às vezes chamada de F_ibd, do "identical by descent"). Assumindo que há uma "população de referência", isso equivale a perguntar qual a probabilidade de amostrar duas cópias gênicas que descendem de uma mesma cópia gênica na geração original?
 
 Para explorar a trajetória temporal do F_ibd, examine o código no arquivo [ibd_single_pop.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/ibd_single_pop.R). Execute cada passo desse código, buscando entender o que ele está fazendo, até que esteja confortável com essa representação da deriva genética.
 
@@ -35,7 +35,7 @@ Para explorar a trajetória temporal do F_ibd, examine o código no arquivo [ibd
 
 ## Simulando o aumento de IBD com o tempo: várias populações
 
-Já criamos um arquivo  que realiza essa simulação múltiplas vezes, e também calcula a média para esse conjunto. Esse material está no arquivo [ibd_many_pops.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/ibd_many_pops.R). Use esse simulador e novamente explore o efeito de diferentes valores de N.
+Já criamos um arquivo que realiza essa simulação múltiplas vezes, e também calcula a média para esse conjunto. Esse material está no arquivo [ibd_many_pops.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/ibd_many_pops.R). Use esse simulador e novamente explore o efeito de diferentes valores de N.
 
 **Questão 2.** Em genética de populações, uma estratégia importante para avaliar se as simulações estão programadas de modo correto envolve comparar os resultados simulados com aqueles esperados pela teoria. Usando a fórmula para o aumento da probabilidade de identidade por descendência ao longo do tempo, inclua no gráfico uma linha que indique a trajetória esperada, dado o valor de N. Compare com o valor simulado. A teoria parece estar funcionando? Em média, quanto tempo demora para haver uma "alta probabilidade" de todas cópias gênicas serem descendentes de uma única ancestral?
 
@@ -47,7 +47,7 @@ Vamos agora estudar o tempo de fixação de uma mutação de modo mais detalhado
 
 ## Deriva genética para um lócus bialélico
 
-A forma mais habitual de se ilustrar o processo de deriva envolve a trajetória temporal para um lócus bialélico. São os gráficos comumente usados em livro texto, e presentes no capítulo de Hedrick, que vocês leram. Use o código presente no arquivo [drift_single_pop.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_single_pop.R) para entender como se gera tal gráfico, e cerfitique-se que compreendeu como cada estapa está sendo feita.
+A forma mais habitual de se ilustrar o processo de deriva envolve a trajetória temporal para um lócus bialélico. São os gráficos comumente usados em livro texto, e presentes no capítulo de Hedrick, que vocês leram. Use o código presente no arquivo [drift_single_pop.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_single_pop.R) para entender como se gera tal gráfico, e cerfitique-se que compreendeu como cada etapa está sendo feita.
 
 **Questão 4.** Usando o arquivo [drift_multiple_pops.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_multiple_pops.R) gere gráficos que ilustram o processo de deriva, variando o valor de N e as frequências iniciais, e veja o efeito sobre as trajetórias temporais e probabilidades de fixação. Repetindo as simulações um grande número de vezes, certifique-se que de fato a probablidade de fixação é dada pela frequência inicial do alelo.
 
