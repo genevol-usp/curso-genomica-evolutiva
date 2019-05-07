@@ -7,7 +7,7 @@ Importar os dados de contagens genotípicas para o R. Lembre que essas contagens
 genos <- read.table("./results/chr21.yri.genotypecounts.tsv", header = TRUE)
 ```
 
-Criar colunas no data.frame `genos` que se referem às frequências do genótipos e dos alelos, a partir das contagens observadas dos genotótipos.
+Criar colunas no data.frame `genos` que se referem às frequências do genótipos e dos alelos, a partir das contagens observadas dos genótipos.
 
 ``` r
 # total of individuals
