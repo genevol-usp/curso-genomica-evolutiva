@@ -31,8 +31,8 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
 **Leitura prévia:** Ramachandran (2010), "Genetics and genomics of human population structure" _In_ M.R. Speicher et al. (eds.), Vogel and Motulsky’s Human Genetics: Problems and Approaches, 589 DOI 10.1007/978-3-540-37654-5_20, © Springer-Verlag Berlin Heidelberg.  (No drive da disciplina)
 
 1. Conceitos básicos de deriva genética
-2. Derivando algumas expressões básicas: declínio de H com o tempo, probabilidade de fixação.
-3. Prática de deriva genética
+2. Derivando algumas expressões básicas: declínio de H com o tempo, aumento de IBD, probabilidade de fixação, tempo de fixação. 
+3. Práticas de deriva genética (scripts e roteiro por [aqui](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/README.md))
   - simulação de deriva: um algoritmo básico em pseudocódigo
   - simulação de deriva: um programa em R
   - deriva com tamanho constante
@@ -40,7 +40,6 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
   - equivalência entre demografia complexa e tamanho efetivo
  
  4. Introdução à teoria da coalescência (pi, S e D)
- 5. Simulação coalescente simples em R
  
  **Leitura pós-aula:** [Prugnolle (2005)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1800886/), um pequeno exemplo sobre os efeitos de deriva (no drive da disciplina).
 
