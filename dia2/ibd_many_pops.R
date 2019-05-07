@@ -38,10 +38,9 @@ lines(rowMeans(P), lwd=3)
 
 # Ft = 1 - ( 1 - 1/2N)^t
 
-numeric <- ibd.theoretical
-
-for(t in 1: ngens)
-ibd.theoretical[t] <- 1 - ( 1- 1/(2*N))^t
-lines(ibd.theoretical, lty=3, lwd=4)
+ibd.th <- numeric()
+for(t in 1:ngens)
+ibd.th[t] <- 1 - ( 1- 1/(2*N))^t
+lines(ibd.th, lty=3, lwd=3)
 
 
