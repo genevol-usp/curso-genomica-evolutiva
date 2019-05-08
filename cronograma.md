@@ -46,7 +46,7 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
 
 ## Dia 3: Modelo básico de seleção natural
 
-**Leitura prévia:** - Holsinger, K. " Theory of Selection in Populations" _In_ ["The Princeton Guide to Evolution", Ed. Losos, J.](https://press.princeton.edu/titles/10100.html) (No drive da disciplina)
+**Leitura prévia:** Holsinger, "Theory of Selection in Populations" (No drive da disciplina).
 
 1. Conceitos básicos de seleção e parametrização.
 2. Simulação de seleção em R
@@ -56,25 +56,24 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
 
 **Leitura pós-aula:** 
 
-- Vitti JJ, Grossman SR, Sabeti PC. Detecting natural selection in genomic data.
-Annu Rev Genet. 2013;47:97-120. doi: 10.1146/annurev-genet-111212-133526. Review.
-PubMed PMID: 24274750. (no drive da disciplina)
+- Vitti JJ, Grossman SR, Sabeti PC, "Detecting Natural Selection in Genomic Data". (no drive da disciplina)
 
 
 ## Dia 4: Detecção de seleção natural
 
 **Leitura prévia:**
 
-- Petrov, D. "Searching the genome for adaptations" _In_ ["The Princeton Guide to Evolution", Ed. Losos, J.](https://press.princeton.edu/titles/10100.html) (No drive da disciplina)
+- Petrov, "Searching the genome for adaptations". (No drive da disciplina)
 
 - Outro estudo de caso
 
 Manhã: Teoria sobre métodos inter-específicos de detecção de seleção
+
 Tarde: continuação das práticas de seleção natural.
 
 ## Dia 5: Estrutura populacional e reconstrução demográfica a partir de dados genômicos
 
-**Leitura prévia:** Ramashandran (restante do capítulo)
+**Leitura prévia:** Ramachandran (restante do capítulo)
 
 1. Inferência de demografia a partir de dados genômicos
 2. Análise de estrutura populacional
@@ -90,10 +89,9 @@ Prática:
 
 **Leitura prévia:** 
 
-- Fraser HB. Gene expression drives local adaptation in humans. Genome Res. 2013;23(7):1089–1096. doi:10.1101/gr.152710.112. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3698502/)
+- Fraser, "Gene expression drives local adaptation in humans". (No drive da disciplina)
 
 1. Associação: de GWAS até traços de interesse evolutivo, incluindo expressão.
 2. PCA e efeitos confundidores.
 3. Mapeamento de eQTLs
 4. Expressão e seleção
-
