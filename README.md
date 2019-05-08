@@ -35,6 +35,8 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
 
 ## Dia 2: Deriva genética, tamanho efetivo populacional e teoria de coalescência
 
+Quizz: https://forms.gle/7asgbKt8ENGkvpJv9
+
 **Leituras prévias (no drive da disciplina):** 
 
 - Hedrick (2013), "Genetic Drift".
