@@ -1,8 +1,9 @@
 # Curso de Genômica Evolutiva (BIO5789)
 
+<img src="logo.jpg" alt="drawing" width="200"/>
+
 #### Instituto de Biociências, Universidade de São Paulo.
 
-<img src="logo.jpg" alt="drawing" width="200"/>
 
 <br/><br/>
 
