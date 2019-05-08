@@ -3,7 +3,7 @@
 
 ## Dia 1: Dados Genômicos, diversidade genética e modelo de Hardy-Weinberg
 
-**Leitura prévia:** "Hardy-Weinberg Theorem". Hastings, A. (2001) Hardy-Weinberg theorem.In Encyclopedia of Life Sciences. MacMillan Publishing. (No drive da disciplina)
+**Leitura prévia:** Hastings, "Hardy-Weinberg theorem" (No drive da disciplina)
 
 **Teórica**
 
