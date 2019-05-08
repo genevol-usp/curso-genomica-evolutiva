@@ -253,8 +253,11 @@ Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversida
 ![](README_files/figure-markdown_github/chr21_pi-1.png)
 
 Alguns desafios:
+
 (A) Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
+
 (B) Qual a diversidade nucleotídica média?
+
 (C) Assumindo que  a taxa de mutação por base é 10^-8, qual é o tamanho efetivo populacional da população Yoruba?
 
 Leitura pós-aula
