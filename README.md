@@ -4,9 +4,13 @@
 
 #### Instituto de Biociências, Universidade de São Paulo.
 
-
 <br/><br/>
 
+Acesso IBNET:
+usuário: bio5789
+senha er52g2
+
+<br/><br/>
 
 # Cronograma 
 
