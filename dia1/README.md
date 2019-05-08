@@ -239,7 +239,11 @@ Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão
 
 ### Chr21: região com alto desvio
 
+![](README_files/figure-markdown_github/chr21_short-1.png)
+
 ### Chr21: região com baixo desvio
+
+![](README_files/figure-markdown_github/chr21_long-1.png)
 
 Como a diversidade genética se distribui ao longo do Chr21
 ----------------------------------------------------------
