@@ -51,7 +51,9 @@ A forma mais habitual de se ilustrar o processo de deriva envolve a trajetória 
 
 **Questão 4.** Usando o arquivo [drift_multiple_pops.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia2/drift_multiple_pops.R) gere gráficos que ilustram o processo de deriva, variando o valor de N e as frequências iniciais, e veja o efeito sobre as trajetórias temporais e probabilidades de fixação. Repetindo as simulações um grande número de vezes, certifique-se que de fato a probablidade de fixação é dada pela frequência inicial do alelo.
 
-**Questão 5.** Nós incluímos no código também um cálculo de como a taxa de heterozigose (H) muda ao longo do tempo, tanto para populações individuais, como para a média do conjunto de populações. Sua tarefa é investigar se o declínio de H ao longo do tempo se dá de acordo com a expectativa teórica. Para fazer isso, relembre a equação a ser usada (citada no Hedrick) e inclua-a no gráfico para a trajetória simulada de H. 
+**Questão 5A.** Nós incluímos no código também um cálculo de como a taxa de heterozigose (H) muda ao longo do tempo, tanto para populações individuais, como para a média do conjunto de populações. Sua tarefa é investigar se o declínio de H ao longo do tempo se dá de acordo com a expectativa teórica. Para fazer isso, relembre a equação a ser usada (citada no Hedrick) e inclua-a no gráfico para a trajetória simulada de H. 
+
+**Questão 5B.** Analise agora a variância nas frequências alélicas entre as populações. Qual a trajetória da variância ao longo do tempo? Como essa variância se relaciona ao tamanho populacional usado nas simulações?
 
 ## Deriva genética numa população com tamanho variável: o efeito gargalo
 
