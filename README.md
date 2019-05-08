@@ -44,6 +44,8 @@ Leitura pós aula: [Graffelman & Weir](https://link.springer.com/article/10.1007
 
 Quizz: https://forms.gle/7asgbKt8ENGkvpJv9
 
+Quizz deriva: https://forms.gle/5JDXLVPFimyWfgzNA
+
 **Leituras prévias (no drive da disciplina):** 
 
 - Hedrick (2013), "Genetic Drift".
