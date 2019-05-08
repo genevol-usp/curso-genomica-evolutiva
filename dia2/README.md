@@ -3,7 +3,7 @@ Deriva Genética
 
 O objetivo dessa prática é usar simulações para ilustrar conceitos básicos de deriva genética. 
 
-## O conceito básico de deriva e um simulador básico
+## O conceito básico de deriva e um simulador simples
 
 Vimos na aula que a deriva genética pode ser definida do ponto de vista biológico: oscilações em
 frequências alélicas resultantes do tamanho finito das populações.
@@ -61,7 +61,7 @@ Até aqui, fizemos simulações com populações de tamanho constante. Podemos a
 
 Nesse código geramos gráficos que mostram mudanças de frequências alélicas, assim como as trajetórias temporais do valor de H, calculadas usando as fórmulas que vimos em sala. 
 
-**Questão 6.** Explore o efeito do garagalo sobre as mudanças de frequências alélicas, altere sua magnitude gargalo. Há um efeito claro das mudanças de N? A volta para um N grande "recupera" a variabilidade perdida?
+**Questão 6.** Explore o efeito do garagalo sobre as mudanças de frequências alélicas, altere sua magnitude gargalo. Há um efeito claro das mudanças de N? A volta para um N grande "recupera" a variabilidade perdida? Explore diferentes tamanhos de gargalo, para ilustrar seu efeito.
 
 Vamos agora ver em detalhe os efeitos do gargalo sobre a diversidade genética medida pelo H. Na última porção do código, nós  mostramos como H muda ao longo do tempo, em função do valor de N (simplesmente usamos a fórmula para mudança de H, mas atualizamos o N para cada geração). 
 
