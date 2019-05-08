@@ -5,7 +5,6 @@
 <img src="logo.jpg" alt="drawing" width="200"/>
 
 <br/><br/>
-<br/><br/>
 
 
 # Cronograma 
