@@ -1,14 +1,10 @@
 # Genetic Drift with variable population size
 
-# Number of generations
-ngens <- 2000
-
-# Number of individuals:
-N <- sample(10:1000, ngens, replace = TRUE)
-
 # Um único gargalo populacional. Explore outros valores de gargalo, e tente também fazer gargalos seriados.
 N <- c(rep(10000,490), rep(50,20), rep(10000,490))
 
+# Number of generations
+ngens <- length(N)
 
 # Population of individuals '0' or '1':
 pop <- rep(0:1, each = N[1]/2)
