@@ -1,4 +1,5 @@
 Roteiro para discussões sobre seleção natural
+=============================================
 
 
 ## Modelo determinístico de seleção natural
@@ -23,10 +24,7 @@ Faça simulações para valores adaptativos de WAA=1.00; WAa=0.95; Waa=0,90, com
 
 Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1982-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende da intensidade de seleção que a favorece e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é 1/2N (o que equivale a dizer que ela está presente em uma só cópia, pois é “recém surgida”, a fórmula é:
 
-P=1−e−2s1−e−4Ns 
-
 ![](fix_prob.png)
-
 
 que para valores de s relativamente baixos e N elevado se aproxima de 2s.
 
@@ -48,6 +46,10 @@ Utilize o simulador indicado no exercício anterior para ver se a predição te�
 
 ## Tempo até fixação
 
-Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é 4N gerações. Já para mutações sob seleção, o tempo médio é dado por: tfix=2ln(2Ne)s, onde o ln refere-se ao logaritmo na base natural.
+Outro importante resultado teórico referente à trajetória de mutações diz respeito ao tempo médio que demora para uma mutação surgir e se fixar. Para uma mutação neutra o tempo médio até a fixação é 4N gerações. Já para mutações sob seleção, o tempo médio é dado por:
+
+![](fix_time.png),
+
+onde o ln refere-se ao logaritmo na base natural.
 
 Utilizando essas expressões, compare o tempo médio até a fixação de uma mutação neutra que surge numa população de N=1000 indivíduos com o tempo até a fixação para uma mutação que confere vantagem de 1% (ou seja, s=0,01), também numa população de N=1000. A diferença nesses tempos dá alguma ideia sobre como podemos buscar identificar regiões do genoma que estiveram sob os efeitos de seleção natural?
