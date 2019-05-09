@@ -169,7 +169,16 @@ valores indicam?
 
 Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
-3.
+3. Uma questão de ordem técnica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e Na o que isso significa? Como isso pode interferir nos resultados?
+
+4. Os valores de FST observados entre os pareas de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
+
+5. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235?
+
+6. Discuta como esses resultados justificam analisar os dados através do teste de PBS?
+
+## PBS
+
 
 
 
