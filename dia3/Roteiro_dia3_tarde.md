@@ -92,22 +92,22 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 
 ## No R
 
-Suponha que estamos interessados em estudar o SNP da posição 136608646.
-Vamos averiguar se esse SNP apresenta sinais de seleção através dos
-testes que acabamos de realizar no vcftools.
+Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
+
+Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre predomiantemente em populações Europeias. Vamos partir desse exemplo clássico para poder aplicar e compreender a interpretação de alguns testes de seleção natural.
+
 
 ## D de Tajima
 
-Analise os resultados obtidos para o teste de D de Tajima e responda as
+Primeiro, analise os resultados obtidos para o teste de D de Tajima e responda as
 questões abaixo. Você pode usar como base o script [Pratica_dia3_selecao.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia3/Pratica_dia3_selecao.R), porém tenha
 certeza que consegue compreender os comandos que estão sendo executados.
 
-1. Quais os valores observados de D de Tajima para o SNP da posição 136608646 em cada grupo de
+1. Quais os valores observados de D de Tajima para o SNP rs4988235 em cada grupo de
 populações: Africano, Europeu e Leste Asiático? O que cada um desses
 valores indicam?
 
-2. Esses valores são significativos em relação a média genômica
-populacional? Como é possível interpretar esses resultados resultados?
+2. Teste se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população? Como é possível interpretar esses resultados?
 
 ## FST
 
