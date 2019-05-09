@@ -59,7 +59,7 @@ Utilizando essas expressões, compare o tempo médio até a fixação de uma mut
 Segunda parte da aula
 ===============================
 
-## Métodos para Detecção de Seleção Natural
+## Métodos para Detecção de Seleção Natural Intraespecíficos
 
 # Descrição do Dataset
 
