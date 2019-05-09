@@ -25,6 +25,9 @@ Os padrões gerais vistos no exercício anterior foram investigados de modo anal
 
 P=1−e−2s1−e−4Ns 
 
+![](fix_prob.png)
+
+
 que para valores de s relativamente baixos e N elevado se aproxima de 2s.
 
 De posse desse resultado, considere uma mutação presente em uma única cópia, que ocorre numa população de tamanho N=1000. Contraste as probabilidades de fixação de mutações de dois tipos:
