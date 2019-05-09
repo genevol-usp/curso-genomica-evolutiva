@@ -90,11 +90,11 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 /home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
-## No R
+## Gene Candidato
 
 Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
 
-Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre predomiantemente em populações Europeias. Vamos partir desse exemplo clássico para poder aplicar e compreender a interpretação de alguns testes de seleção natural.
+Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre predomiantemente em populações Europeias. A partir desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
 
 
 ## D de Tajima
@@ -110,6 +110,8 @@ valores indicam?
 2. Teste se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população? Como é possível interpretar esses resultados?
 
 ## FST
+
+
 
 
 
