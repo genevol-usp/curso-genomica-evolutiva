@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia3_selection/AFR_maf.Tajima.D

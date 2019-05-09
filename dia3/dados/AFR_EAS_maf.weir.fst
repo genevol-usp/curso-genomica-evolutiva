@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia3_selection/AFR_EAS_maf.weir.fst

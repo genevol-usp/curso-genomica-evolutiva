@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia3_selection/EUR_maf.Tajima.D

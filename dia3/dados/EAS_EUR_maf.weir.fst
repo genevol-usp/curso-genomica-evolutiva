@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia3_selection/EAS_EUR_maf.weir.fst

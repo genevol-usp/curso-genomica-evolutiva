@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia3_selection/pop_AFR_EAS_EUR_1000g.txt
