@@ -86,7 +86,7 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.vcf --chr 2 --TajimaD 1000  --out EUR# 1
 ```
 
 2.  Através do vcftools, estime o indice FST entre os pares de
-    populações
+    populações (\~20 min cada)
 
 <!-- end list -->
 
@@ -111,7 +111,7 @@ testes que acabamos de realizar no vcftools.
 ## D de Tajima
 
 Analise os resultados obtidos para o teste de D de Tajima e responda as
-questões abaixo. Você pode usar como base o script XXXXXXX, porém tenha
+questões abaixo. Você pode usar como base o script [Pratica_dia3_selecao.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia3/Pratica_dia3_selecao.R), porém tenha
 certeza que consegue compreender os comandos que estão sendo executados.
 
 1.  Verifique se o SNP na posição 136608646 é um outlier em relação aos
