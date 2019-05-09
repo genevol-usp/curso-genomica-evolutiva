@@ -73,16 +73,10 @@ familiarizado com o vcftools, pode utilizar os seguintes comandos:
 
 <!-- end list -->
 
-``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_maf.recode.vcf --chr 2 --TajimaD 1000  --out AFR# 1000 is a arbitrary number
 ```
-
-``` r
-vcftools --vcf SNPs_Chr2_filter_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS # 1000 é um número arbitrário e corresponde ao tamanho da janela para a estimativa do teste.
-```
-
-``` r
-vcftools --vcf SNPs_Chr2_filter_EUR_maf.vcf --chr 2 --TajimaD 1000  --out EUR# 1000 é um número arbitrário e corresponde ao tamanho da janela para a estimativa do teste.
+vcftools --vcf SNPs_Chr2_filter_AFR_maf.recode.vcf --chr 2 --TajimaD 1000  --out AFR & 
+vcftools --vcf SNPs_Chr2_filter_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
+vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
 ```
 
 2.  Através do vcftools, estime o indice FST entre os pares de
@@ -91,15 +85,9 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.vcf --chr 2 --TajimaD 1000  --out EUR# 1
 <!-- end list -->
 
 ``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EAS --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt
-```
-
-``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt
-```
-
-``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out EAS_EUR --chr 5 --weir-fst-pop pop_EAS_1000g.txt --weir-fst-pop pop_EUR_1000g.txt
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EAS --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
 ## No R
@@ -114,14 +102,17 @@ Analise os resultados obtidos para o teste de D de Tajima e responda as
 questões abaixo. Você pode usar como base o script [Pratica_dia3_selecao.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia3/Pratica_dia3_selecao.R), porém tenha
 certeza que consegue compreender os comandos que estão sendo executados.
 
-1.  Verifique se o SNP na posição 136608646 é um outlier em relação aos
-    demais SNPs do cromossomo 2.
-
-1.1. Quais os valores observados de D de Tajima para cada grupo de
+1. Quais os valores observados de D de Tajima para o SNP da posição 136608646 em cada grupo de
 populações: Africano, Europeu e Leste Asiático? O que cada um desses
 valores indicam?
 
-1.2 Esses valores são significativos em relação a média genômica
-populacional? Como é possível interpretar a partir desses resultados?
+2. Esses valores são significativos em relação a média genômica
+populacional? Como é possível interpretar esses resultados resultados?
 
 ## FST
+
+
+
+
+
+
