@@ -179,7 +179,12 @@ Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
 ## PBS
 
+7. O que a análise de PBS revela? Qual a diferença entre a análise de PBS e FST?
 
+## Análise para conjunto de SNPs adjacentes
 
+Um dos grandes desafios na análise de dados em larga escala é a proporção de falsos positivos detectados. Uma abordagem adotada para diminuir esse ruído é a análise conjunta de marcadores adjacentes (média em uma janela de N SNPs). A ideia é que devido o LD entre os marcadores o sinal de seleção em um determinado SNP, será compartilhado pelos SNPs adjacentes. Deste modo, um sinal verdadeiro também será reproduzido na análise por janelas, enquanto um resultado espúrio não.
 
+Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alterar o tamanho dessas janelas e observar as mudanças nos padrões através dos gráficos.
 
+8. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
