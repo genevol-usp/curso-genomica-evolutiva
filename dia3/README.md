@@ -1,6 +1,8 @@
 Roteiro para discussões sobre seleção natural
 =============================================
 
+Slides da aula [aqui](coal.pdf).
+
 
 ## Modelo determinístico de seleção natural
 
