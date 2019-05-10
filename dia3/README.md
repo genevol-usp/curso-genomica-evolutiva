@@ -42,7 +42,7 @@ Agora imagine que essa mesma mutação vantajosa tivesse surgido numa populaçã
 
 Os resultados anteriores, referentes à probabilidade de fixação, podem ser testados usando simulações. Aliás, é uma prática comum em estudos de genética de populações comparar resultados teóricos com os simulados. Essa abordagem é poderosa, pois caso a teoria seja nova, obter os mesmos resultados que aqueles aqueles da simulação mostra que a teoria está funcionando. Por outro lado se o simulador é novo e a teoria já estabelecida, obter o mesmo resultado indica que o simulador foi programado corretamente.
 
-Utilize o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada. Lembre de ajustar a frequência inicial do alelo para 1/2N, que corresponde à condição de haver apenas uma cópia do alelo presente na população. Para facilitar o exercício, simule casos em que s=0,05 com um tamanho populacional de N=100. Para cada réplica incluam um numero elevado de populações (por exemplo, 100) e registre o número que se fixou. Compare com o valor teórico esperado.
+Utilize o simulador indicado no exercício anterior para ver se a predição teórica é de fato observada (ou seja, a de que a probabilidade de fixação de uma mutação vantajosa é aproximadamente 2s). Lembre de ajustar a frequência inicial do alelo para 1/2N, que corresponde à condição de haver apenas uma cópia do alelo presente na população. Para facilitar o exercício, simule casos em que s=0,05, em que a seleção segue um modelo aditivo e com um tamanho populacional de N=100. Para cada réplica incluam um numero elevado de populações (por exemplo, 100) e registre o número que se fixou. Compare com o valor teórico esperado.
 
 ## Tempo até fixação
 
