@@ -24,9 +24,7 @@ Você pode usar o simulador clicando no link acima, mas pode ser mais eficiente 
 
 1. Clone o repositório na sua home do servidor, ou no seu computador próprio, com o comando: 
 
-`git clone git@github.com:liamrevell/PopGen.apps.git`
-
-`git clone https://github.com/liamrevell/PopGen.apps.git
+`git clone https://github.com/liamrevell/PopGen.apps.git`
 
 Assim você terá uma pasta PopGen.apps. Abra o Rstudio, entre nessa pasta e abra o arquivo app.R dentro de drift.selection. Clique no botão "Run App" no Rstudio.
 
