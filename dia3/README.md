@@ -18,6 +18,20 @@ Para contrastar o modelo determinístico de seleção natural com um que contemp
 
 https://phytools.shinyapps.io/drift-selection/
 
+Você pode usar o simulador clicando no link acima, mas pode ser mais eficiente baixa-lo no servidor ou na sua máquina local. Há 2 opções para fazer isso:
+
+1. Clone o repositório na sua home do servidor, ou no seu computador próprio, com o comando: 
+
+`git clone git@github.com:liamrevell/PopGen.apps.git`
+
+Assim você terá uma pasta PopGen.apps. Abra o Rstudio, entre nessa pasta e abra o arquivo app.R dentro de drift.selection. Clique no botão "Run App" no Rstudio.
+
+2. Ou apenas copie e cole o arquivo app.R dentro da pasta drift.selection no repositório do simulador:
+
+https://github.com/liamrevell/PopGen.apps
+
+Então, abra esse arquivo no Rstudio e clique no botão "Run App".
+
 Faça simulações para valores adaptativos de WAA=1.00; WAa=0.95; Waa=0,90, com frequência inicial do alelo em 0.05. Varie o tamanho da população e discuta o efeito sobre as trajetórias e as probabilidades de fixação da mutação vantajosa. O que acontece se você reduz a frequência inicial do alelo vantajoso para 0,01? De modo geral, a partir de quais combinações de tamanho populacional e intensidade de seleção os afeitos estocásticos (introduzidos pela deriva) passam a dominar?
 
 ## Probabilidade de fixação sob seleção e deriva genética
