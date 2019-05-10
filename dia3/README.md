@@ -38,7 +38,7 @@ Faça simulações para valores adaptativos de WAA=1.00; WAa=0.95; Waa=0,90, com
 
 ## Probabilidade de fixação sob seleção e deriva genética
 
-Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1982-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende da intensidade de seleção que a favorece e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é 1/2N (o que equivale a dizer que ela está presente em uma só cópia, pois é “recém surgida”, a fórmula é:
+Os padrões gerais vistos no exercício anterior foram investigados de modo analítico por J.B.S. Haldane (1892-1964) Motoo Kimura (1924-1994). Eles descobriram que a probabilidade de fixação de uma mutação vantajosa depende da intensidade de seleção que a favorece e também de sua frequência inicial. No caso especial em que a frequência inicial da mutação é 1/2N (o que equivale a dizer que ela está presente em uma só cópia, pois é “recém surgida”, a fórmula é:
 
 ![](fix_prob.png)
 
