@@ -72,12 +72,10 @@ Quizz deriva: https://forms.gle/5JDXLVPFimyWfgzNA
 2. Simulação de seleção em R
 3. Simulação de seleção e deriva em R usando o pacote LearnPopGen
 4. Testes de seleção intra-específicos (teórica)
-5. Prática de seleção: métodos intra-específicos.
 
 **Leitura pós-aula:** 
 
 - Vitti JJ, Grossman SR, Sabeti PC, "Detecting Natural Selection in Genomic Data". (no drive da disciplina)
-- Yi et al 2010, "Sequencing of 50 Human Exomes Reveals Adaptation to High Altitude". (no drive da disciplina)
 
 
 ## Dia 4: Detecção de seleção natural
@@ -86,11 +84,13 @@ Quizz deriva: https://forms.gle/5JDXLVPFimyWfgzNA
 
 - Petrov, "Searching the genome for adaptations". (No drive da disciplina)
 
-- Outro estudo de caso
+- Yi et al 2010, "Sequencing of 50 Human Exomes Reveals Adaptation to High Altitude". (no drive da disciplina)
 
-Manhã: Teoria sobre métodos inter-específicos de detecção de seleção
 
-Tarde: continuação das práticas de seleção natural.
+Manhã: Prática seleção Natural.
+
+Tarde: Discussão dos artigos.
+
 
 ## Dia 5: Estrutura populacional e reconstrução demográfica a partir de dados genômicos
 
