@@ -339,3 +339,5 @@ windPBS_distrQT
 
 # Plotar a linha de corte para o quantil
 abline(h=windPBS_distrQT[[8]], lty=2)
+
+
