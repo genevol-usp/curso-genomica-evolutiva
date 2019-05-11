@@ -77,6 +77,7 @@ Quizz deriva: https://forms.gle/5JDXLVPFimyWfgzNA
 **Leitura pós-aula:** 
 
 - Vitti JJ, Grossman SR, Sabeti PC, "Detecting Natural Selection in Genomic Data". (no drive da disciplina)
+- Yi et al 2010, "Sequencing of 50 Human Exomes Reveals Adaptation to High Altitude". (no drive da disciplina)
 
 
 ## Dia 4: Detecção de seleção natural
