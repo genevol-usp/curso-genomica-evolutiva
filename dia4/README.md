@@ -142,15 +142,11 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 
 12. Descreva qual o padrão observado a partir dos gráficos gerados na análise de eHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela? Como essa informação é representada nos gráficos de bifurcação?
 
-13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235
-
-
-
-
+13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235. Se achar necessário, altere o número de SNPs para melhor visualizar a região nos três pares populacionais. Em seguida, interprete e discuta os resultados: (i) O que significam valores positivos e negativos para xpEHH? (ii) Qual a relação dos valores de xpEHH e as diferenças de eHH entre pares de populações? (iii) De modo geral, os pesquisadores assume que um valor de xpEHH >2 pode ser considerado um sinal de seleção para uma região candidata. Como vocês sugerem que esse threshold foi definido?
 
 # Testes de seleção e escalas temporais
-12. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
+14. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
 
 # Seleção natural x Demografia
 
-13. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?
+15. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?
