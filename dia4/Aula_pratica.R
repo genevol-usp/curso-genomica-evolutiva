@@ -360,8 +360,6 @@ abline(v=pbs_LCT$PBS_EUR, lty=2)
 
 ### EHH
 
-#setwd("/home/kelly/CLASS/eHH/")
-
 ## Instalar o pacote rehh
 install.packages("rehh")
 
