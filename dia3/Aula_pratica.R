@@ -457,4 +457,7 @@ xpEHH.EAS.EUR<-ies2xpehh(EUR,EAS)
 head(xpEHH.EAS.EUR[xpEHH.EAS.EUR$POSITION>=136608646,],10)
 xpehhplot(xpEHH.EAS.EUR,plot.pval=TRUE)
 
-write.table(xpEHH.EAS.EUR, "xpehh_EAS_EUR.txt", quote=F, col.names=T, row.names=F, sep="\t", eol="\n")
+# EAS x AFR
+xpEHH.EAS.AFR<-ies2xpehh(EAS,AFR)
+head(xpEHH.EAS.AFR[xpEHH.EAS.AFR$POSITION>=136608646,],10)
+xpehhplot(xpEHH.EAS.AFR,plot.pval=TRUE)
