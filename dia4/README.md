@@ -5,7 +5,7 @@ Métodos para Detecção de Seleção Natural Intraespecíficos
 
 Os dados que usaremos na aula prática de hoje são oriundos de dois datasets públicos:
 
-1) Dados de ressequenciamento por NGS do [Projeto 1000 Genomas fase III](http://www.internationalgenome.org/data#download) que podem ser acessados através do link: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ .Esse dataset será utilizado para as análises com os testes de D de Tajima, FST e PBS.
+1) Dados de ressequenciamento do genoma completo por NGS (WG-NGS) do [Projeto 1000 Genomas fase III](http://www.internationalgenome.org/data#download) que podem ser acessados através do link: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ .Esse dataset será utilizado para as análises com os testes de D de Tajima, FST e PBS.
 
 2) Dados de genotipagem para ~600K SNPS (Axiom Human Origins - Affymetrix) do Painel de Diversidade Genética Humna [HGDP-CEPH - dataset 11](http://www.cephb.fr/en/hgdp_panel.php). Esse segundo dataset será utilizado para as análises de Homozigose Haplótipo Extendido.
 
@@ -36,7 +36,7 @@ vcftools --vcf SNPs_Chr2_filter.recode.vcf --keep pop_AFR_EAS_EUR_1000g.txt --re
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-alleles 2 --maf 0.05 --max-maf 0.95 --recode --out SNPs_Chr2_filter_AFR_EAS_EUR_maf
+vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-alleles 2 --maf 0.05 --max-maf 0.95 --recode --out SNPs_Chr2_AFR_EUR_EAS_maf
 ```
 
   - No vcftools, selecionar as amostras de indivíduos para cada
@@ -45,15 +45,15 @@ vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-all
 <!-- end list -->
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_AFR_1000g.txt --recode --out SNPs_Chr2_filter_AFR_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_AFR_1000g.txt --recode --out SNPs_Chr2_AFR_maf
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_EAS_1000g.txt --recode --out SNPs_Chr2_filter_EAS_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_EAS_1000g.txt --recode --out SNPs_Chr2_EAS_maf
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_EUR_1000g.txt --recode --out SNPs_Chr2_filter_EUR_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_EUR_1000g.txt --recode --outSNPs_Chr2_EUR_maf
 ```
 
 # Vamos para a prática
@@ -70,9 +70,9 @@ familiarizado com o vcftools, pode utilizar os seguintes comandos:
 <!-- end list -->
 
 ```
-vcftools --vcf SNPs_Chr2_filter_AFR_maf.recode.vcf --chr 2 --TajimaD 1000  --out AFR & 
-vcftools --vcf SNPs_Chr2_filter_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
-vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
+vcftools --vcf SNPs_Chr2_AFR_maf.recode.vcf--chr 2 --TajimaD 1000  --out AFR & 
+vcftools --vcf SNPs_Chr2_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
+vcftools --vcf SNPs_Chr2_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
 ```
 
 2.  Através do vcftools, estime o indice FST entre os pares de
@@ -81,9 +81,9 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 <!-- end list -->
 
 ``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EAS --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EAS_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
 Se surgirem dúvidas a respeito de como o vcftools estima os testes acima ou sobre algum argumento excecutado na linha de comando, não deixe de consultar o [manual do programa](https://vcftools.github.io/examples.html).
@@ -108,36 +108,45 @@ valores indicam em termos de seleção natural e distribuição das frequencias 
 
 2. Teste se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população? Como é possível interpretar esses resultados?
 
+3. Altere os tamanhos de janela da estimativa de D de Tajima aumentando e diminuindo o tamanho inicial em uma ordem de grandeza. Em seguida interprete e discuta os resultados: (i) Há alterações nos resultados? (ii) Houve mudanças no sinal da estimativa de D para a região do SNP de interesse? (iii) O leva observar um resultado NaN?
+
 ## FST
 
-Em seguida, vamos analisar os resultados obtidos com as análises de FST.
+Agora, vamos analisar os resultados obtidos com as análises de FST.
 
-3. Uma questão de ordem teórica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e "NA" o que isso significa? Como isso pode interferir nos resultados?
+4. A estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e "NA" o que isso significa? Como isso pode interferir nos resultados?
 
-4. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
+5. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
 
-5. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235?
+6. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235? 
 
-6. Discuta como esses resultados justificam analisar os dados através do teste de PBS?
+7. Discuta como esses resultados justificam analisar os dados através do teste de PBS.
 
 ## PBS
 
-7. O que a análise de PBS revela? Qual a diferença entre a análise de PBS e FST?
+8. O que a análise de PBS revela? Qual a diferença entre a análise de PBS e FST?
 
-## Análise para conjunto de SNPs adjacentes
+### Análise para conjunto de SNPs adjacentes
 
 Um dos grandes desafios na análise de dados em larga escala é a proporção de falsos positivos detectados. Uma abordagem adotada para diminuir esse ruído é a análise conjunta de marcadores adjacentes (média em uma janela de N SNPs). A ideia é que devido o LD entre os marcadores o sinal de seleção em um determinado SNP, será compartilhado pelos SNPs adjacentes. Deste modo, um sinal verdadeiro também será reproduzido na análise por janelas, enquanto um resultado espúrio não.
 
 Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alterar o tamanho dessas janelas e através de gráficos observar as mudanças nos padrões.
 
-8. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
+9. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235/região do SNP?
+
+10. Quais as vantagens e limitações que os dados obtidos por WG-NGS apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
 
 ## Homozigose haplótipo extendido (eHH)
-9. Quais os pré-requisitos que seu dado deve cumprir para podermos realizar as análises de eHH?
+
+11. As análises e eHH, iHS e xpEHH serão realizadas com o pacote rehh do R (Gautier, Klassmann, Vitalis et al. 2017). Para otimizar o nosso tempo, os dados foram pré-processados e formatados para atender adequadamente os requisitos das análises. Frente ao que vimos na aula teórica e na leitura prévia (Vitti et al., 2013), quais requisitos/informações sobre os dados são essenciais para a realização das análises de homozigose haplótipo extendido (ehh, iHS e xpEHH)? Como é possível gerar e/ou obter essas informações?
+
+12. Descreva qual o padrão observado a partir dos gráficos gerados na análise de eHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela? Como essa informação é representada nos gráficos de bifurcação?
+
+13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235. Se achar necessário, altere o número de SNPs para melhor visualizar a região nos três pares populacionais. Em seguida, interprete e discuta os resultados: (i) O que significam valores positivos e negativos para xpEHH? (ii) Qual a relação dos valores de xpEHH e as diferenças de eHH entre pares de populações? (iii) De modo geral, os pesquisadores assume que um valor de xpEHH >2 pode ser considerado um sinal de seleção para uma região candidata. Como vocês sugerem que esse threshold foi definido?
 
 # Testes de seleção e escalas temporais
-10. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
+14. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
 
 # Seleção natural x Demografia
 
-11. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?
+15. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?

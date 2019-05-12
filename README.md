@@ -87,10 +87,15 @@ Quizz deriva: https://forms.gle/5JDXLVPFimyWfgzNA
 - Yi et al 2010, "Sequencing of 50 Human Exomes Reveals Adaptation to High Altitude". (no drive da disciplina)
 
 
-Manhã: Prática seleção Natural.
+Manhã: Prática Seleção Natural.
+- Uso de ferramentas como vcftools e R para estimar métodos de detecção de seleção intra-específicos.
+1. D de Tajima
+2. FST
+3. PBS
+4. eHH (EHH, iHS e xpEHH)
+5. Metódos para distinguir o efeito seletivo e demográfico nas assinaturas genômicas.
 
 Tarde: Discussão dos artigos.
-
 
 ## Dia 5: Estrutura populacional e reconstrução demográfica a partir de dados genômicos
 

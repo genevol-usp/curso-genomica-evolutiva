@@ -231,6 +231,10 @@ PBS_EUR[which(PBS_EUR<0)] <- 0 # converter valores negativos para 0
 fst_pbs<-as.data.frame(cbind(FST_EasEur_data_clean$POS, FST_AfrEas_data_clean$WEIR_AND_COCKERHAM_FST, FST_AfrEur_data_clean$WEIR_AND_COCKERHAM_FST, FST_EasEur_data_clean$WEIR_AND_COCKERHAM_FST, PBS_EUR), stringsAsFactors=FALSE)
 head(fst_pbs)
 
+## Verifique o valor de PBS para o SNP de interesse
+pbs_LCT<-fst_pbs[fst_pbs$V1==POS,]
+pbs_LCT
+
 # 2) Construa um gráfico para essa região delimitada de 10000 pares de bases adjacentes ao SNP da posição 136608646.
 
 # Delimite a região de interesse para 10000 pares de bases adjacentes
@@ -344,12 +348,19 @@ windPBS_distrQT
 abline(h=windPBS_distrQT[[8]], lty=2)
 
 
-### Demografia X Seleção Natural
+### Seleção Natural e Modelos Neutros
+# Simulamos a história demografia e frequencias alelos para amostras populacionais semelhantes a AFR, EUR, EAS.
+# Em seguida a partir desses dados simulados, estimamos o FST e PBS.
+# O arquivo com os valores de PBS simulados sob o modelo neutro é:
 
+modelo_neutro<-read.table("./Dados/pbs_simulado.txt")
+
+hist(modelo_neutro$V2, main="Modelo Neutro", xlab="PBS", breaks=40, col="skyblue3", xlim=c(0,1))
+abline(v=pbs_LCT$PBS_EUR, lty=2)
 
 ### EHH
 
-setwd("/home/kelly/CLASS/eHH/")
+#setwd("/home/kelly/CLASS/eHH/")
 
 ## Instalar o pacote rehh
 install.packages("rehh")
@@ -379,6 +390,30 @@ ehh_calc_EAS<-calc_ehh(data3,mrk = "Affx-17915429", main="pos 136603690")
 ehh_calc_AFR<-calc_ehh(data1,mrk = "Affx-17915837", main="pos 136619114")
 ehh_calc_EUR<-calc_ehh(data2,mrk = "Affx-17915837", main="pos 136619114")
 ehh_calc_EAS<-calc_ehh(data3,mrk = "Affx-17915837", main="pos 136619114")
+
+## Diagrama de bifurcação
+
+# AFR
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram AFR (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram AFR (pos 136619114): Derived Allele")
+
+# EUR
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EUR (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data2,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EUR (pos 136619114): Derived Allele")
+
+#EAS
+bifurcation.diagram(data3,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EAS (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data3,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EAS (pos 136619114): Derived Allele")
+
 
 ## Estimar o iHH (pode levar ~4 minutos)
 AFR<-scan_hh(data1)
@@ -433,6 +468,7 @@ xpEHH.EAS.EUR<-ies2xpehh(EUR,EAS)
 head(xpEHH.EAS.EUR[xpEHH.EAS.EUR$POSITION>=136608646,],10)
 xpehhplot(xpEHH.EAS.EUR,plot.pval=TRUE)
 
-#write.table(xpEHH.EAS.EUR, "xpehh_EAS_EUR.txt", quote=F, col.names=T, row.names=F, sep="\t", eol="\n")
-
-
+# EAS x AFR
+xpEHH.EAS.AFR<-ies2xpehh(EAS,AFR)
+head(xpEHH.EAS.AFR[xpEHH.EAS.AFR$POSITION>=136608646,],10)
+xpehhplot(xpEHH.EAS.AFR,plot.pval=TRUE)
