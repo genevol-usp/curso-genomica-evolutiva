@@ -70,9 +70,9 @@ familiarizado com o vcftools, pode utilizar os seguintes comandos:
 <!-- end list -->
 
 ```
-vcftools --vcf SNPs_Chr2_filter_AFR_maf.recode.vcf --chr 2 --TajimaD 1000  --out AFR & 
-vcftools --vcf SNPs_Chr2_filter_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
-vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
+vcftools --vcf SNPs_Chr2_AFR_maf.recode.vcf--chr 2 --TajimaD 1000  --out AFR & 
+vcftools --vcf SNPs_Chr2_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
+vcftools --vcf SNPs_Chr2_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
 ```
 
 2.  Através do vcftools, estime o indice FST entre os pares de
@@ -81,9 +81,9 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 <!-- end list -->
 
 ``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EAS --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EAS_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
 Se surgirem dúvidas a respeito de como o vcftools estima os testes acima ou sobre algum argumento excecutado na linha de comando, não deixe de consultar o [manual do programa](https://vcftools.github.io/examples.html).
