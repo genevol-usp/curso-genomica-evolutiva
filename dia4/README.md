@@ -102,7 +102,7 @@ Se surgirem dúvidas a respeito de como o vcftools estima os testes acima ou sob
 
 Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Sugerindo que isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
 
-Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia em algumas populações, em especial do Norte da Europa. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva. Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
+Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia em algumas populações, em especial do Norte da Europa. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva (Bersaglieri et al. 2004; Coelho et al., 2005; Itan et al., 2009 - os artigos estão no drive da disciplina). Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
 
 # Testes de seleção
 ## D de Tajima
