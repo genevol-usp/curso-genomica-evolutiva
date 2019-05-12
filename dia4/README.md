@@ -5,18 +5,9 @@ Métodos para Detecção de Seleção Natural Intraespecíficos
 
 Os dados que usaremos na aula prática de hoje são oriundos de dois datasets públicos:
 
-1) Dados de ressequenciamento por NGS do Projeto 1000 Genomas fase III e podem ser acessado a partir dos seguintes links:
+1) Dados de ressequenciamento por NGS do [Projeto 1000 Genomas fase III](ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/). Esse dataset será utilizado para as análises com os testes de D de Tajima, FST e PBS.
 
-<ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/>
-
-<http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/README_vcf_info_annotation.20141104>
-
-Esse dataset será utilizado para as análises com os testes de D de Tajima, FST e PBS.
-
-2) Dados de genotipagem para ~600K SNPS (Axiom Human Origins - Affymetrix) do Painel de Diversidade Genética Humna (HGDP-CEPH - dataset 11):
-<ftp://ftp.cephb.fr/hgdp_supp10/>
-
-Esse segundo dataset será utilizado para as análises de Homozigose Haplótipo Extendido.
+2) Dados de genotipagem para ~600K SNPS (Axiom Human Origins - Affymetrix) do Painel de Diversidade Genética Humna [HGDP-CEPH - dataset 11](ftp://ftp.cephb.fr/hgdp_supp10/). Esse segundo dataset será utilizado para as análises de Homozigose Haplótipo Extendido.
 
 
 ## Pré-processamento dos dados
