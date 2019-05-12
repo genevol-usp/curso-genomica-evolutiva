@@ -349,7 +349,7 @@ abline(h=windPBS_distrQT[[8]], lty=2)
 
 ### EHH
 
-setwd("/home/kelly/CLASS/eHH/")
+#setwd("/home/kelly/CLASS/eHH/")
 
 ## Instalar o pacote rehh
 install.packages("rehh")
@@ -379,6 +379,30 @@ ehh_calc_EAS<-calc_ehh(data3,mrk = "Affx-17915429", main="pos 136603690")
 ehh_calc_AFR<-calc_ehh(data1,mrk = "Affx-17915837", main="pos 136619114")
 ehh_calc_EUR<-calc_ehh(data2,mrk = "Affx-17915837", main="pos 136619114")
 ehh_calc_EAS<-calc_ehh(data3,mrk = "Affx-17915837", main="pos 136619114")
+
+## Diagrama de bifurcação
+
+# AFR
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram AFR (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram AFR (pos 136619114): Derived Allele")
+
+# EUR
+bifurcation.diagram(data1,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EUR (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data2,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EUR (pos 136619114): Derived Allele")
+
+#EAS
+bifurcation.diagram(data3,mrk_foc="Affx-17915837",all_foc=1,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EAS (pos 136619114): Ancestral Allele")
+
+bifurcation.diagram(data3,mrk_foc="Affx-17915837",all_foc=2,nmrk_l=20,nmrk_r=20,
+                    main="Bifurcation diagram EAS (pos 136619114): Derived Allele")
+
 
 ## Estimar o iHH (pode levar ~4 minutos)
 AFR<-scan_hh(data1)
@@ -433,6 +457,4 @@ xpEHH.EAS.EUR<-ies2xpehh(EUR,EAS)
 head(xpEHH.EAS.EUR[xpEHH.EAS.EUR$POSITION>=136608646,],10)
 xpehhplot(xpEHH.EAS.EUR,plot.pval=TRUE)
 
-#write.table(xpEHH.EAS.EUR, "xpehh_EAS_EUR.txt", quote=F, col.names=T, row.names=F, sep="\t", eol="\n")
-
-
+write.table(xpEHH.EAS.EUR, "xpehh_EAS_EUR.txt", quote=F, col.names=T, row.names=F, sep="\t", eol="\n")
