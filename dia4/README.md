@@ -1,21 +1,30 @@
 Métodos para Detecção de Seleção Natural Intraespecíficos
 ==========================================================
 
-## Descrição do Dataset
+## Descrição dos Datasets
 
-Os dados que usaremos na aula prática de hoje são oriundos do Projeto
-1000 Genomas fase III e podem ser acessado a partir dos seguintes links:
+Os dados que usaremos na aula prática de hoje são oriundos de dois datasets públicos:
+
+1) Dados de ressequenciamento por NGS do Projeto 1000 Genomas fase III e podem ser acessado a partir dos seguintes links:
 
 <ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/>
 
 <http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/README_vcf_info_annotation.20141104>
+
+Esse dataset será utilizado para as análises com os testes de D de Tajima, FST e PBS.
+
+2) Dados de genotipagem para ~600K SNPS (Axiom Human Origins - Affymetrix) do Painel de Diversidade Genética Humna (HGDP-CEPH - dataset 11):
+<ftp://ftp.cephb.fr/hgdp_supp10/>
+
+Esse segundo dataset será utilizado para as análises de Homozigose Haplótipo Extendido.
+
 
 ## Pré-processamento dos dados
 
   - Para otimizar nosso tempo, analisaremos um conjunto de dados
     pré-processados para o cromossomo 2 correspondente a indivíduos
     amostrados das populações AFR (504 indivíduos), EUR (503 indivíduos)
-    e EAS (504 indivíduos). Por hora, não é preciso repetir esses
+    e EAS (504 indivíduos) do 1000 Genomas. Por hora, não é preciso repetir esses
     filtros, mas fica aqui o registro dos comando utilizados:
 
   - No vcftools, remover os INDELs e singletons (\~1h)
@@ -86,11 +95,14 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 /home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
+Se surgirem dúvidas a respeito de como o vcftools estima os testes acima ou sobre algum argumento excecutado na linha de comando, não deixe de consultar o manual do programa. [vcftools](https://vcftools.github.io/examples.html)
+
+
 # Gene Candidato
 
-Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
+Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Sugerindo que isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
 
-Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia nas populações Europeias. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva. Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
+Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia em algumas populações, em especial do Norte da Europa. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva. Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
 
 # Testes de seleção
 ## D de Tajima
