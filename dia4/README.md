@@ -140,7 +140,9 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 
 11. As análises e eHH, iHS e xpEHH serão realizadas com o pacote rehh do R (Gautier, Klassmann, Vitalis et al. 2017). Para otimizar o nosso tempo, os dados foram pré-processados e formatados para atender adequadamente os requisitos das análises. Frente ao que vimos na aula teórica e na leitura prévia (Vitti et al., 2013), quais requisitos/informações sobre os dados são essenciais para a realização das análises de homozigose haplótipo extendido (ehh, iHS e xpEHH)? Como é possível gerar e/ou obter essas informações?
 
-12. Descreva qual o padrão observado a partir dos gráficos gerados na análise de eHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela?
+12. Descreva qual o padrão observado a partir dos gráficos gerados na análise de eHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela? Como essa informação é representada nos gráficos de bifurcação?
+
+13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235
 
 
 
