@@ -36,7 +36,7 @@ vcftools --vcf SNPs_Chr2_filter.recode.vcf --keep pop_AFR_EAS_EUR_1000g.txt --re
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-alleles 2 --maf 0.05 --max-maf 0.95 --recode --out SNPs_Chr2_filter_AFR_EAS_EUR_maf
+vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-alleles 2 --maf 0.05 --max-maf 0.95 --recode --out SNPs_Chr2_AFR_EUR_EAS_maf
 ```
 
   - No vcftools, selecionar as amostras de indivíduos para cada
@@ -45,15 +45,15 @@ vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR.recode.vcf --min-alleles 2 --max-all
 <!-- end list -->
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_AFR_1000g.txt --recode --out SNPs_Chr2_filter_AFR_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_AFR_1000g.txt --recode --out SNPs_Chr2_AFR_maf
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_EAS_1000g.txt --recode --out SNPs_Chr2_filter_EAS_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_EAS_1000g.txt --recode --out SNPs_Chr2_EAS_maf
 ```
 
 ``` r
-vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --keep pop_EUR_1000g.txt --recode --out SNPs_Chr2_filter_EUR_maf
+vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --keep pop_EUR_1000g.txt --recode --outSNPs_Chr2_EUR_maf
 ```
 
 # Vamos para a prática
