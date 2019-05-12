@@ -108,29 +108,36 @@ valores indicam em termos de seleção natural e distribuição das frequencias 
 
 2. Teste se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população? Como é possível interpretar esses resultados?
 
+3. Altere os tamanhos de janela da estimativa de D de Tajima aumentando e diminuindo o tamanho inicial em uma ordem de grandeza.Em seguida interprete e discuta os resultados: (i) Há alterações nos resultados? (ii) Houve mudanças no sinal da estimativa de D para a região do SNP de interesse? (iii) O leva observar um resultado NaN?
+
+4. Quais a vantagens e limitações do teste de D de Tajima em dados obtidos por NGS?
+
+
 ## FST
 
 Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
-3. Uma questão de ordem teórica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e "NA" o que isso significa? Como isso pode interferir nos resultados?
+5. A estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e "NA" o que isso significa? Como isso pode interferir nos resultados?
 
-4. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
+6. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
 
-5. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235?
+7. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235?
 
-6. Discuta como esses resultados justificam analisar os dados através do teste de PBS?
+8. Discuta como esses resultados justificam analisar os dados através do teste de PBS?
 
 ## PBS
 
-7. O que a análise de PBS revela? Qual a diferença entre a análise de PBS e FST?
+9. O que a análise de PBS revela? Qual a diferença entre a análise de PBS e FST?
 
-## Análise para conjunto de SNPs adjacentes
+### Análise para conjunto de SNPs adjacentes
 
 Um dos grandes desafios na análise de dados em larga escala é a proporção de falsos positivos detectados. Uma abordagem adotada para diminuir esse ruído é a análise conjunta de marcadores adjacentes (média em uma janela de N SNPs). A ideia é que devido o LD entre os marcadores o sinal de seleção em um determinado SNP, será compartilhado pelos SNPs adjacentes. Deste modo, um sinal verdadeiro também será reproduzido na análise por janelas, enquanto um resultado espúrio não.
 
 Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alterar o tamanho dessas janelas e através de gráficos observar as mudanças nos padrões.
 
-8. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
+10. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
+
+
 
 ## Homozigose haplótipo extendido (eHH)
 9. Quais os pré-requisitos que seu dado deve cumprir para podermos realizar as análises de eHH?
