@@ -231,6 +231,10 @@ PBS_EUR[which(PBS_EUR<0)] <- 0 # converter valores negativos para 0
 fst_pbs<-as.data.frame(cbind(FST_EasEur_data_clean$POS, FST_AfrEas_data_clean$WEIR_AND_COCKERHAM_FST, FST_AfrEur_data_clean$WEIR_AND_COCKERHAM_FST, FST_EasEur_data_clean$WEIR_AND_COCKERHAM_FST, PBS_EUR), stringsAsFactors=FALSE)
 head(fst_pbs)
 
+## Verifique o valor de PBS para o SNP de interesse
+pbs_LCT<-fst_pbs[fst_pbs$V1==POS,]
+pbs_LCT
+
 # 2) Construa um gráfico para essa região delimitada de 10000 pares de bases adjacentes ao SNP da posição 136608646.
 
 # Delimite a região de interesse para 10000 pares de bases adjacentes
@@ -344,8 +348,15 @@ windPBS_distrQT
 abline(h=windPBS_distrQT[[8]], lty=2)
 
 
-### Demografia X Seleção Natural
+### Seleção Natural e Modelos Neutros
+# Simulamos a história demografia e frequencias alelos para amostras populacionais semelhantes a AFR, EUR, EAS.
+# Em seguida a partir desses dados simulados, estimamos o FST e PBS.
+# O arquivo com os valores de PBS simulados sob o modelo neutro é:
 
+modelo_neutro<-read.table("./Dados/pbs_simulado.txt")
+
+hist(modelo_neutro$V2, main="Modelo Neutro", xlab="PBS", breaks=40, col="skyblue3", xlim=c(0,1))
+abline(v=pbs_LCT$PBS_EUR, lty=2)
 
 ### EHH
 
