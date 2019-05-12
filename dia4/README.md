@@ -90,7 +90,7 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 
 Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
 
-Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre predomiantemente em populações Europeias. A partir desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
+Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia nas populações Europeias. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva. Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
 
 
 ## D de Tajima
@@ -111,7 +111,7 @@ Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
 3. Uma questão de ordem técnica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e Na o que isso significa? Como isso pode interferir nos resultados?
 
-4. Os valores de FST observados entre os pareas de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
+4. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
 
 5. A partir dos valores de FST observados entre os pares de populações e as estimativas de significância o que podemos dizer sobre a diferenciação do SNP rs4988235?
 
@@ -125,6 +125,16 @@ Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
 Um dos grandes desafios na análise de dados em larga escala é a proporção de falsos positivos detectados. Uma abordagem adotada para diminuir esse ruído é a análise conjunta de marcadores adjacentes (média em uma janela de N SNPs). A ideia é que devido o LD entre os marcadores o sinal de seleção em um determinado SNP, será compartilhado pelos SNPs adjacentes. Deste modo, um sinal verdadeiro também será reproduzido na análise por janelas, enquanto um resultado espúrio não.
 
-Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alterar o tamanho dessas janelas e observar as mudanças nos padrões através dos gráficos.
+Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alterar o tamanho dessas janelas e através de gráficos observar as mudanças nos padrões.
 
 8. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
+
+## Homozigose haplótipo extendido (eHH)
+
+
+## Testes de seleção e escalas temporais
+10. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
+
+# Seleção natural x Demografia
+
+11. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?
