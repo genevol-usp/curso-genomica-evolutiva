@@ -1,7 +1,7 @@
 Métodos para Detecção de Seleção Natural Intraespecíficos
 ==========================================================
 
-# Descrição do Dataset
+## Descrição do Dataset
 
 Os dados que usaremos na aula prática de hoje são oriundos do Projeto
 1000 Genomas fase III e podem ser acessado a partir dos seguintes links:
@@ -10,7 +10,7 @@ Os dados que usaremos na aula prática de hoje são oriundos do Projeto
 
 <http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/README_vcf_info_annotation.20141104>
 
-# Pré-processamento dos dados
+## Pré-processamento dos dados
 
   - Para otimizar nosso tempo, analisaremos um conjunto de dados
     pré-processados para o cromossomo 2 correspondente a indivíduos
@@ -86,13 +86,13 @@ vcftools --vcf SNPs_Chr2_filter_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out
 /home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_filter_AFR_EAS_EUR_maf.recode.vcf --out AFR_EUR --chr 5 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
 ```
 
-## Gene Candidato
+# Gene Candidato
 
 Um dos exemplos de seleção natural mais emblemáticos em humanos são as mutações na região promotora do gene LCT. O gene LCT codifica para a enzima lactase e indivíduos portadores de mutações na região promotora, continuam a expressar o gene LCT na vida adulta. Isso lhes confere uma vantagem adaptativa ao apresentar uma fonte energética/nutricional adicional. 
 
 Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646 - hg19) ocorre em alta frequencia nas populações Europeias. Diversos estudos encontraram assinaturas genéticas que sugerem que a variante -13910T aumentou de frequencia por um processo de seleção positiva. Partindo desse exemplo clássico, usaremos a abordagem de SNP candidato para aplicar e compreender a interpretação de alguns testes de seleção natural.
 
-
+# Testes de seleção
 ## D de Tajima
 
 Primeiro, analise os resultados obtidos para o teste de D de Tajima e responda as
@@ -132,7 +132,7 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 ## Homozigose haplótipo extendido (eHH)
 
 
-## Testes de seleção e escalas temporais
+# Testes de seleção e escalas temporais
 10. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
 
 # Seleção natural x Demografia
