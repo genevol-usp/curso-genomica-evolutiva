@@ -353,7 +353,7 @@ abline(h=windPBS_distrQT[[8]], lty=2)
 # Em seguida a partir desses dados simulados, estimamos o FST e PBS.
 # O arquivo com os valores de PBS simulados sob o modelo neutro é:
 
-modelo_neutro<-read.table("./Dados/pbs_simulado.txt")
+modelo_neutro<-read.table("./dados/pbs_simulado.txt")
 
 hist(modelo_neutro$V2, main="Modelo Neutro", xlab="PBS", breaks=40, col="skyblue3", xlim=c(0,1))
 abline(v=pbs_LCT$PBS_EUR, lty=2)
@@ -369,9 +369,9 @@ install.packages("rehh")
 library("rehh")
 
 # Converter os dados para o formato haplohh
-data1<-data2haplohh(hap_file = "AFR_HGDP_chr2_hg19.thap", map_file="AFR_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
-data2<-data2haplohh(hap_file = "EUR_HGDP_chr2_hg19.thap", map_file="EUR_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
-data3<-data2haplohh(hap_file = "EAS_HGDP_chr2_hg19.thap", map_file="EAS_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
+data1<-data2haplohh(hap_file = "./dados/AFR_HGDP_chr2_hg19.thap", map_file="./dados/AFR_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
+data2<-data2haplohh(hap_file = "./dados/EUR_HGDP_chr2_hg19.thap", map_file="./dados/EUR_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
+data3<-data2haplohh(hap_file = "./dados/EAS_HGDP_chr2_hg19.thap", map_file="./dados/EAS_HGDP_chr2_hg19.inp", chr.name=2, haplotype.in.columns=T, min_perc_geno.hap=10, min_perc_geno.snp=10) 
 
 ## Identificar SNP mais próximo a região da lactase, para usar como core allele
 SNP_id<-read.table("EUR_HGDP_chr2_hg19.inp")
