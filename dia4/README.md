@@ -101,7 +101,7 @@ certeza que consegue compreender os comandos que estão sendo executados.
 
 1. Quais os valores observados de D de Tajima para o SNP rs4988235 em cada grupo de
 populações: Africano, Europeu e Leste Asiático? O que cada um desses
-valores indicam?
+valores indicam em termos de seleção natural e distribuição das frequencias alélicas?
 
 2. Teste se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população? Como é possível interpretar esses resultados?
 
@@ -109,7 +109,7 @@ valores indicam?
 
 Em seguida, vamos analisar os resultados obtidos com as análises de FST.
 
-3. Uma questão de ordem técnica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e Na o que isso significa? Como isso pode interferir nos resultados?
+3. Uma questão de ordem teórica para pode compreender melhor os resultados, a estimativa de FST por Weir e Cockerham, por vezes podem gerar valores negativos e "NA" o que isso significa? Como isso pode interferir nos resultados?
 
 4. Os valores de FST observados entre os pares de populações para o SNP rs4988235 caem dentro de quais quantils de distribuição? Eles podem ser considerados outliers?
 
@@ -130,7 +130,7 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 8. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235?
 
 ## Homozigose haplótipo extendido (eHH)
-
+9. Quais os pré-requisitos que seu dado deve cumprir para podermos realizar as análises de eHH?
 
 # Testes de seleção e escalas temporais
 10. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
