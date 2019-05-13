@@ -10,6 +10,8 @@
 
 cd $PBS_O_WORKDIR
 
-pop=`awk "FNR==$PBS_ARRAYID" ./populations.txt`
+populations=(AFR EUR EAS)
+
+pop="${populations[$PBS_ARRAYID-1]}"
 
 vcftools --vcf ./dados/SNPs_Chr2_${pop}_maf.recode.vcf --chr 2 --TajimaD 1000 --out $pop

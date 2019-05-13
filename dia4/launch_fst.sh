@@ -10,7 +10,9 @@
 
 cd $PBS_O_WORKDIR
 
-pair=$(awk "FNR==$PBS_ARRAYID" ./population_pairs.txt)
+allpairs=(AFR_EAS AFR_EUR EAS_EUR)
+
+pair="${allpairs[$PBS_ARRAYID-1]}"
 
 pop1=$(echo $pair | cut -d'_' -f1)
 pop2=$(echo $pair | cut -d'_' -f2)
