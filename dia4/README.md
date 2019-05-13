@@ -91,9 +91,9 @@ vcftools --vcf ./dados/SNPs_Chr2_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --ou
 <!-- end list -->
 
 ``` r
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EAS_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EAS_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
-/home/debora/vcftools/src/cpp/vcftools --vcf SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop pop_AFR_1000g.txt --weir-fst-pop pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf ./dados/SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EAS_maf --chr 2 --weir-fst-pop ./dados/pop_AFR_1000g.txt --weir-fst-pop ./dados/pop_EAS_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf ./dados/SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop ./dados/pop_AFR_1000g.txt --weir-fst-pop ./dados/pop_EUR_1000g.txt &
+/home/debora/vcftools/src/cpp/vcftools --vcf ./dados/SNPs_Chr2_AFR_EUR_EAS_maf.recode.vcf --out AFR_EUR_maf --chr 2 --weir-fst-pop ./dados/pop_AFR_1000g.txt --weir-fst-pop ./dados/pop_EUR_1000g.txt &
 ```
 
 Se surgirem dúvidas a respeito de como o vcftools estima os testes acima ou sobre algum argumento excecutado na linha de comando, não deixe de consultar o [manual do programa](https://vcftools.github.io/examples.html). Garante que você entende os argumentos que estão sendo usados no comando.
