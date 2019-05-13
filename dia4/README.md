@@ -1,6 +1,11 @@
 Métodos para Detecção de Seleção Natural Intraespecíficos
 ==========================================================
 
+Quiz:
+https://forms.gle/afgazwsFPJnM1S5D6
+
+
+
 ## Objetivo
 
 Nosso objetivo hoje é ter um contato direto com métodos que buscam identificar regiões do genoma que sofreram seleção natural. Usaremos dados genômicos reais e duas classes de testes: um baseado em diferenciação populacional e outro baseado na análise de haplótipos (mais especificamente o método de Homozigose Haplótipo Extendido, o EHH).
