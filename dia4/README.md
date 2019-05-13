@@ -80,9 +80,9 @@ familiarizado com o vcftools, pode utilizar os seguintes comandos:
 <!-- end list -->
 
 ```
-vcftools --vcf SNPs_Chr2_AFR_maf.recode.vcf--chr 2 --TajimaD 1000  --out AFR & 
-vcftools --vcf SNPs_Chr2_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
-vcftools --vcf SNPs_Chr2_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
+vcftools --vcf ./dados/SNPs_Chr2_AFR_maf.recode.vcf --chr 2 --TajimaD 1000  --out AFR & 
+vcftools --vcf ./dados/SNPs_Chr2_EAS_maf.recode.vcf --chr 2 --TajimaD 1000  --out EAS &
+vcftools --vcf ./dados/SNPs_Chr2_EUR_maf.recode.vcf --chr 2 --TajimaD 1000  --out EUR &
 ```
 
 2.  Através do vcftools, estime o indice Fst entre os pares de
