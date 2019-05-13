@@ -169,5 +169,5 @@ Imagine que há uma espécie de roedor que é capaz de viver em elevadas altitud
 
 Um tema recorrente na aula de hoje foi a complicação introduzida pela necessidade de avaliar se os padrões de variação vistos nos dados (seja na forma de Fst, variabilidade, D de Tajima, EHH) é consequência da ação da seleção ou da história demográfica. Considerando tudo que foi lido e discutido, imagine que cabe a você iria se preparar um projeto para estudar adaptação de populações indígenas brasileiras. Qual dado você usaria? Que abordagem usaria para separar os efeitos de demografia e seleção?
 
-
-10. Quais as vantagens e limitações que os dados obtidos por sequenciamento de nova geração (NGS) apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
+## ...
+Quais as vantagens e limitações que os dados obtidos por sequenciamento de nova geração (NGS) apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
