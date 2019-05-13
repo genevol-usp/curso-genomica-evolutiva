@@ -111,7 +111,7 @@ Dentre os SNPs da região promotora, o -13910C>T (rs4988235; posição 136608646
 ## D de Tajima
 
 Primeiro, analise os resultados obtidos para o teste de D de Tajima e responda as
-questões abaixo. Você pode usar como base o script [Pratica_dia3_selecao.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia4/Aula_pratica.R). Tenha
+questões abaixo. Você pode usar como base o script [Aula_pratica.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia4/Aula_pratica.R). Tenha
 certeza que  compreende os comandos que estão sendo executados.
 
 1. Quais os valores observados de D de Tajima para a janela contendo o SNP rs4988235 em cada grupo de
