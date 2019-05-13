@@ -156,9 +156,18 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 
 13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235. Se achar necessário, altere o número de SNPs para melhor visualizar a região nos três pares populacionais. Em seguida, interprete e discuta os resultados: (i) O que significam valores positivos e negativos para xpEHH? (ii) Qual a relação dos valores de xpEHH e as diferenças de EHH entre pares de populações? (iii) De modo geral, os pesquisadores assumem que um valor de xpEHH >2 pode ser considerado um sinal de seleção para uma região candidata. Como vocês sugerem que esse limiar foi definido?
 
-# Testes de seleção e escalas temporais
-14. Diferentes metodologias e estratégias são adotadas para a detecção de sinais seletivos. Deste modo, cada classe de métodos consegue detectar assinaturas seletivas em diferentes escalas de tempo. Discuta sobre as classes de métodos que utilizamos na prática de hoje e o que eles revelam sobre a escala de tempo do processo de seleção natural na persistência de expressãodo do LCT durante a vida adulta.
+# Questões para discussão
 
-# Seleção natural x Demografia
+## O que vem depois de um scan sobre seleção?
 
-15. Por vezes, a seleção natural e a história demografica das populações podem gerar um mesmo padrão de assinatura genética. Quais estratégias podemos adotar para distinguir um sinal seletivo de um demográfico?
+O estudo que vocês leram sobre os exomas de Tibetanos identificou um gene candidato a seleção natural, o EPAS1. Mas achar uma evidência de seleção é o fim da estória, ou o começo? Apresenta que tipos de "novos estudos" são estimulados a partir desses achados.
+
+## Como estudar adaptação inter-específica?
+
+Imagine que há uma espécie de roedor que é capaz de viver em elevadas altitudes, algo que nenhuma outra espécie do seu gênero consegue. Nada se sabe sobre quais genes estão por trás desse fenótipo. Como você propõe que seja feito um estudo para investigar os efeitos da seleção natural sobre a adaptação à vida em altitude?
+
+## Planejando um estudo de adaptação intra-específico.
+
+Um tema recorrente na aula de hoje foi a complicação introduzida pela necessidade de avaliar se os padrões de variação vistos nos dados (seja na forma de Fst, variabilidade, D de Tajima, EHH) é consequência da ação da seleção ou da história demográfica. Considerando tudo que foi lido e discutido, imagine que cabe a você iria se preparar um projeto para estudar adaptação de populações indígenas brasileiras. Qual dado você usaria? Que abordagem usaria para separar os efeitos de demografia e seleção?
+
+
