@@ -118,7 +118,7 @@ certeza que  compreende os comandos que estão sendo executados.
 populações  (Africano, Europeu e Leste Asiático)? O que cada um desses
 valores indica em termos de seleção natural e distribuição das frequencias alélicas? A seleção é a única explicação possível para o valor de D de Tajima encontrado?
 
-2. Verifique se os valores de D de Tajima observados para a janela contendo o SNP rs4988235 são significativos em cada população. Como é possível interpretar esses resultados?
+2. Verifique se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população. Como é possível interpretar esses resultados?
 
 3. Altere os tamanhos de janela da estimativa de D de Tajima aumentando e diminuindo o tamanho inicial em uma ordem de grandeza. Em seguida interprete e discuta os resultados: (i) Há alterações nos resultados? (ii) Houve mudanças no sinal da estimativa de D para a região do SNP de interesse? (iii) Qual a causa de um resultado NaN?
 
@@ -146,15 +146,14 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 
 9. Com base nos três testes aplicados e na análise por janela, discuta como interpretar os sinais observados para o SNP rs4988235/região do SNP?
 
-10. Quais as vantagens e limitações que os dados obtidos por sequenciamento de nova geração (NGS) apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
 
 ## Teste de seleção por Homozigose de Haplótipo Estendido (EHH)
 
-11. As análises e EEH, iHS e xpEHH serão realizadas com o pacote rehh do R (Gautier, Klassmann, Vitalis et al. 2017). Para otimizar o nosso tempo, os dados foram pré-processados e formatados para atender adequadamente os requisitos das análises. Frente ao que vimos na aula teórica e na leitura prévia (Vitti et al., 2013), quais requisitos/informações sobre os dados são essenciais para a realização das análises de homozigose haplótipo extendido (EHH, iHS e xpEHH)? Como é possível gerar e/ou obter essas informações?
+10. As análises e EEH, iHS e xpEHH serão realizadas com o pacote rehh do R (Gautier, Klassmann, Vitalis et al. 2017). Para otimizar o nosso tempo, os dados foram pré-processados e formatados para atender adequadamente os requisitos das análises. Frente ao que vimos na aula teórica e na leitura prévia (Vitti et al., 2013), quais requisitos/informações sobre os dados são essenciais para a realização das análises de homozigose haplótipo extendido (EHH, iHS e xpEHH)? Como é possível gerar e/ou obter essas informações?
 
-12. Descreva qual o padrão observado a partir dos gráficos gerados na análise de EHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela? Como essa informação é representada nos gráficos de bifurcação?
+11. Descreva qual o padrão observado a partir dos gráficos gerados na análise de EHH para a região do rs4988235 em cada grupo populacional (AFR, EUR, EAS). O que esse padrão revela? Como essa informação é representada nos gráficos de bifurcação?
 
-13. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235. Se achar necessário, altere o número de SNPs para melhor visualizar a região nos três pares populacionais. Em seguida, interprete e discuta os resultados: (i) O que significam valores positivos e negativos para xpEHH? (ii) Qual a relação dos valores de xpEHH e as diferenças de EHH entre pares de populações? (iii) De modo geral, os pesquisadores assumem que um valor de xpEHH >2 pode ser considerado um sinal de seleção para uma região candidata. Como vocês sugerem que esse limiar foi definido?
+12. Explore os resultados de xpEHH para as regiões adjacentes ao SNP rs4988235. Se achar necessário, altere o número de SNPs para melhor visualizar a região nos três pares populacionais. Em seguida, interprete e discuta os resultados: (i) O que significam valores positivos e negativos para xpEHH? (ii) Qual a relação dos valores de xpEHH e as diferenças de EHH entre pares de populações? (iii) De modo geral, os pesquisadores assumem que um valor de xpEHH >2 pode ser considerado um sinal de seleção para uma região candidata. Como vocês sugerem que esse limiar foi definido?
 
 # Questões para discussão
 
@@ -171,3 +170,4 @@ Imagine que há uma espécie de roedor que é capaz de viver em elevadas altitud
 Um tema recorrente na aula de hoje foi a complicação introduzida pela necessidade de avaliar se os padrões de variação vistos nos dados (seja na forma de Fst, variabilidade, D de Tajima, EHH) é consequência da ação da seleção ou da história demográfica. Considerando tudo que foi lido e discutido, imagine que cabe a você iria se preparar um projeto para estudar adaptação de populações indígenas brasileiras. Qual dado você usaria? Que abordagem usaria para separar os efeitos de demografia e seleção?
 
 
+10. Quais as vantagens e limitações que os dados obtidos por sequenciamento de nova geração (NGS) apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
