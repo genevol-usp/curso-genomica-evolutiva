@@ -118,7 +118,7 @@ certeza que  compreende os comandos que estão sendo executados.
 populações  (Africano, Europeu e Leste Asiático)? O que cada um desses
 valores indica em termos de seleção natural e distribuição das frequencias alélicas? A seleção é a única explicação possível para o valor de D de Tajima encontrado?
 
-2. Verifique se os valores de D de Tajima observados para o SNP rs4988235 são significativos em cada população. Como é possível interpretar esses resultados?
+2. Verifique se os valores de D de Tajima observados para a janela contendo o SNP rs4988235 são significativos em cada população. Como é possível interpretar esses resultados?
 
 3. Altere os tamanhos de janela da estimativa de D de Tajima aumentando e diminuindo o tamanho inicial em uma ordem de grandeza. Em seguida interprete e discuta os resultados: (i) Há alterações nos resultados? (ii) Houve mudanças no sinal da estimativa de D para a região do SNP de interesse? (iii) Qual a causa de um resultado NaN?
 
