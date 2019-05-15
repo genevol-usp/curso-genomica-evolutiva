@@ -1,11 +1,7 @@
 Estruturação populacional e estimativas de miscigenação
 ================
-Kelly Nunes
-5/15/2019
 
-## Estruturação populacional e estimativas de miscigenação
-
-# Objetivo
+## Objetivo
 
 A aula prática de hoje tem como objetivo explorar diferentes métodos que
 utilizam dados genéticos em larga para a detecção de estrutura
@@ -25,7 +21,7 @@ abordagens distintas:
     com base na frequencia alelica populacional. Esse método usa como
     base o modelo de Hardy-Weinberg e o LD entre os loci.
 
-# Descrição do dataset
+## Descrição do dataset
 
 Como dataset, usaremos dados públicos, que contém genótipos para SNPs
 autossômicos em amostras Nativo Americanas (NAM) do Painel de
@@ -84,7 +80,7 @@ sendo realizados.
 <!-- end list -->
 
 ``` r
-#admixture  prunedData_Parentais.bed 3  --supervised -j4
+admixture  prunedData_Parentais.bed 3  --supervised -j4
 ```
 
 Vale a pena lembrar que o programa ADMIXTURE implementa essencialmente o
