@@ -37,7 +37,7 @@ e de estudos de associação.
 
 ## Vamos para a prática.
 
-O script () contém as análises básicas que podem ser realizadas em R. Se
+O script [Aula_pratica_5.R](https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/dia5/Aula_pratica_5.R) contém o passo a passoa para as análises básicas que podem ser realizadas em R. Se
 optar por utiliza-lo, tenha certeza que compreende os comandos que estão
 sendo realizados.
 
