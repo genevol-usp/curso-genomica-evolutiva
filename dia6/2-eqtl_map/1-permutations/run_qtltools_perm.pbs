@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=1gb
+#PBS -l walltime=24:00:00 
+#PBS -q short 
+#PBS -j oe 
+#PBS -o $HOME/curso-genomica-evolutiva/dia6/2-eqtl_map/permutations/log/$PBS_JOBID.log
+
+cd $PBS_O_WORKDIR
+
+samples=../genotypes/sampleids.txt
+vcf=../genotypes/ALL.chrs.eur.biallelic.maf.vcf.gz
+cov=../genotypes/covariates_genos.txt
+bed=../phenotypes/phenotypes_$PC.bed.gz
+out=./results/permutations_$PC
+
+QTLtools cis --vcf $vcf --bed $bed --cov $cov --include-samples $samples\
+    --normal --chunk $CHUNK 64 --permute 1000 --out ${out}_$CHUNK.txt
