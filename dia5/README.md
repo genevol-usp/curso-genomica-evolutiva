@@ -1,9 +1,5 @@
 Estruturação populacional e estimativas de miscigenação
 ================
-Kelly Nunes
-5/15/2019
-
-## Estruturação populacional e estimativas de miscigenação
 
 # Objetivo
 
