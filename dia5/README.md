@@ -15,7 +15,7 @@ abordagens distintas:
     distribuída entre os indivíduos da amostra, o que permite
     identificar a existencia ou não de estrutura populacional
 
-  - ADMIXTURE: Esse software desenvolvidos por Alexander et al (ref),
+  - ADMIXTURE: Esse software desenvolvidos por Alexander et al 2009 (artigo no drive da disciplina),
     usa o método de MLE para inferir a probabilidade dos genótipos
     observados em um indivíduos serem atribuído a uma dada ancestralida
     com base na frequencia alelica populacional. Esse método usa como
