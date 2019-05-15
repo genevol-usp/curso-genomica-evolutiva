@@ -41,9 +41,7 @@ O script () contém as análises básicas que podem ser realizadas em R. Se
 optar por utiliza-lo, tenha certeza que compreende os comandos que estão
 sendo realizados.
 
-1 . Primeiro, explore o dataset e determine: (i) Qual o número de
-    indivíduos há nesse dataset? (ii) Qual o número de SNPs? (iii) Qual o
-    número de indivíduos por população?
+1. Primeiro, explore o dataset e determine: (i) Qual o número de indivíduos há nesse dataset? (ii) Qual o número de SNPs? (iii) Qual o número de indivíduos por população?
 
 2.  Uma maneira simples de visualizar como a variância genética entre os
     indivíduos está distribuída e verificar possíveis indícios de
