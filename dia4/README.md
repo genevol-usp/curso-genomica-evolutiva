@@ -159,15 +159,12 @@ Vamos repetir a análise de PBS agora usando uma janela de SNPs. Você pode alte
 
 ## O que vem depois de um scan sobre seleção?
 
-O estudo que vocês leram sobre os exomas de Tibetanos identificou um gene candidato a seleção natural, o EPAS1. Mas achar uma evidência de seleção é o fim da estória, ou o começo? Apresenta que tipos de "novos estudos" são estimulados a partir desses achados.
+O estudo que vocês leram sobre os exomas de Tibetanos (Yi e colaboradores, 2010) identificou um gene candidato a seleção natural, o _EPAS1_. Mas achar uma evidência de seleção é o fim da estória, ou o começo? Pedimos que vocês discutam que tipos de "novos estudos" são estimulados a partir desses achados, quais questões eles podem enfocar, e como eles se estruturam a partir dos achados prévios. Vocês podem citar tanto estudos que de fato foram feitos (caso os conheçam) como simplesmente compartilhar ideias sobre questões que parecem interessantes (na medida do possível, nós comentaremos o quanto elas foram abordadas pela comunidade científica). 
 
 ## Como estudar adaptação inter-específica?
 
-Imagine que há uma espécie de roedor que é capaz de viver em elevadas altitudes, algo que nenhuma outra espécie do seu gênero consegue. Nada se sabe sobre quais genes estão por trás desse fenótipo. Como você propõe que seja feito um estudo para investigar os efeitos da seleção natural sobre a adaptação à vida em altitude?
+Imagine que há uma espécie de roedor que é capaz de viver em elevadas altitudes, algo que nenhuma outra espécie do seu gênero consegue. Nada se sabe sobre quais genes estão por trás desse fenótipo. Como você propõe que seja feito um estudo para investigar os efeitos da seleção natural sobre a adaptação à vida em altitude? Que dados você gostaria de gerar, e quais análises iria realizar, para entender essa adaptação?
 
 ## Planejando um estudo de adaptação intra-específico.
 
-Um tema recorrente na aula de hoje foi a complicação introduzida pela necessidade de avaliar se os padrões de variação vistos nos dados (seja na forma de Fst, variabilidade, D de Tajima, EHH) é consequência da ação da seleção ou da história demográfica. Considerando tudo que foi lido e discutido, imagine que cabe a você iria se preparar um projeto para estudar adaptação de populações indígenas brasileiras. Qual dado você usaria? Que abordagem usaria para separar os efeitos de demografia e seleção?
-
-## ...
-Quais as vantagens e limitações que os dados obtidos por sequenciamento de nova geração (NGS) apresentam frente aos testes de seleção realizados até o momento na prática de hoje? Em especial, discuta como as variantes raras podem influencias nas estimativas de D de Tajima e FST?
+Um tema recorrente na aula de hoje foi a complicação introduzida pela necessidade de avaliar se os padrões de variação vistos nos dados (seja na forma de Fst, variabilidade, D de Tajima, EHH) é consequência da ação da seleção ou da história demográfica. Considerando tudo que foi lido e discutido, imagine que cabe a você está prepararando um projeto para estudar adaptação de populações indígenas brasileiras. Qual dado genético você usaria? Que abordagem analítica (ou abordagens) usaria para separar os efeitos de demografia e seleção?
