@@ -1,0 +1,1 @@
+/home/kelly/CLASS/dia5/prunedData_Parentais.3.Q
