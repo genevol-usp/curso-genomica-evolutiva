@@ -1,6 +1,6 @@
 ### Aula Prática: Estruturação Populacional e estimativas de Miscigenação 
 
-setwd("caminho para o diretório")
+setwd("~/curso-genomica-evolutiva/dia5")
 
 # Instalar os pacotes gdsfmt e SNPRelate
 source("http://bioconductor.org/biocLite.R")
@@ -19,17 +19,17 @@ library("SNPRelate")
 
 # Explore o dataset e determine:
 # 1) Qual o número de indivíduos neste dataset?
-FAM<-read.table("YRI_CEU_ASW_MEX_NAM_edited.fam", sep=" ")
+FAM<-read.table("./dados/YRI_CEU_ASW_MEX_NAM_edited.fam", sep=" ")
 head(FAM)
 dim(FAM)
 
 # 2) Qual o número de SNPs?
-BIN<-read.table("YRI_CEU_ASW_MEX_NAM_edited.bim", sep="\t")
+BIN<-read.table("./dados/YRI_CEU_ASW_MEX_NAM_edited.bim", sep="\t")
 head(BIN)
 dim(BIN)
 
 # 3) Qual o número de amostras em cada população?
-POPINFO=read.table("Population_Sample_Info_edited.txt", header=TRUE)
+POPINFO=read.table("./dados/Population_Sample_Info_edited.txt", header=TRUE)
 table(POPINFO$Population)
 
 ##  Uma das maneiras mais simples de visualizar como a variância genética entre os indivíduos está distribuída e verificar possíveis indícios de estruturação populacional é através de uma análise de Componente Principal (PCA).
@@ -38,9 +38,9 @@ table(POPINFO$Population)
 # Na prática de hoje optamos pelo pacote "SNPRelated".
 
 # Primeiro converta os arquivos do formato binário do plink para o formato gds
-bedfile<-"YRI_CEU_ASW_MEX_NAM_edited.bed" 
-famfile<-"YRI_CEU_ASW_MEX_NAM_edited.fam" 
-bimfile<-"YRI_CEU_ASW_MEX_NAM_edited.bim"
+bedfile<-"./dados/YRI_CEU_ASW_MEX_NAM_edited.bed" 
+famfile<-"./dados/YRI_CEU_ASW_MEX_NAM_edited.fam" 
+bimfile<-"./dados/YRI_CEU_ASW_MEX_NAM_edited.bim"
 
 snpgdsBED2GDS(bedfile, famfile, bimfile, "POPs.gds")
 
