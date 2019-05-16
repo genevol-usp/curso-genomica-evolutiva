@@ -28,8 +28,8 @@ climate_tranks <- climate %>%
     gather(variable, trank, -chr, -rs_number) %>%
     mutate(variable = sub("^trank_", "", variable)) %>%
     group_by(variable) %>%
-    #filter(trank <= quantile(trank, 0.005)) %>%
-    top_n(-5, trank) %>%
+    filter(trank <= quantile(trank, 0.005)) %>%
+    #top_n(-5, trank) %>%
     ungroup()
 
 snp_catalog <- climate_tranks %>%
@@ -40,14 +40,25 @@ snp_catalog <- climate_tranks %>%
     mutate(rs_number = ifelse(is.na(rsCurrent), rs_number, rsCurrent)) %>%
     select(chr, rs_number, variable)
 
-write_tsv(snp_catalog, "snp_climate.tsv", col_names = TRUE)
-#
-#dir.create("catalog")
-#
 #snp_catalog %>%
-#    left_join(snp_pos, by = c("chr", "rs_number")) %>%
-#    filter(!is.na(pos)) %>%
-#    mutate(start = pos - 1L, 
-#	   out = sprintf("./catalog/climate_snps_chr%d.tsv", chr)) %>%
-#    group_split(chr) %>%
-#    walk(~write_tsv(select(., rs_number, variable), unique(.$out), col_names = FALSE))
+#    select(rs_number, variable) %>%
+#    write_tsv("snp_climate.tsv", col_names = FALSE)
+#
+dir.create("catalog")
+
+snp_catalog %>%
+    mutate(out = sprintf("./catalog/climate_snps_chr%d.tsv", chr)) %>%
+    group_split(chr) %>%
+    walk(~write_tsv(select(., rs_number, variable), unique(.$out), col_names = FALSE))
+
+snp_pos <- read_tsv("./snp_positions.tsv", col_names = FALSE) %>%
+    select(-X3) %>%
+    group_by(X1) %>%
+    filter(X2 == min(X2) | X2 == max(X2)) %>%
+    mutate(i = seq_len(n())) %>%
+    ungroup() %>%
+    spread(i, X2) %>%
+    unite(coord, `1`:`2`, sep = "-") %>%
+    unite(region, X1:coord, sep = ":")
+
+writeLines(snp_pos$region, "./regions.txt")
