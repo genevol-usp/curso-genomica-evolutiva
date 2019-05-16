@@ -1,6 +1,8 @@
 Estruturação populacional e estimativas de miscigenação
 ================
 
+Quizz: https://forms.gle/s7D7BHMwpuvaLG5c7
+
 ## Objetivo
 
 A aula prática de hoje tem como objetivo explorar diferentes métodos que
