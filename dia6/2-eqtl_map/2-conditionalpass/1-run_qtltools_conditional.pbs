@@ -6,19 +6,17 @@
 #PBS -t 1-64
 #PBS -q short 
 #PBS -j oe
-#PBS -o ./log/$PBS_ARRAYID.log
+#PBS -o /scratch/bio5789/log/$PBS_JOBID.log
 
 cd $PBS_O_WORKDIR
 
-mkdir -p ./log
-
-pc=50
+pc=20
 samples=../0-genotypes/sampleids.txt
-vcf=../0-genotypes/ALL.chrs.eur.biallelic.maf.vcf.gz
+vcf=/scratch/bio5789/genotypes/ALL.chrs.yri.biallelic.maf.vcf.gz
 cov=../0-genotypes/covariates_genos.txt
 bed=../0-phenotypes/phenotypes_$pc.bed.gz
-thr=../1-permutations/results/permutations_$pc.thresholds.txt
-out=./conditional_$pc
+thr=/scratch/bio5789/permutations/permutations_$pc.thresholds.txt
+out=/scratch/bio5789/conditionalpass/conditional_$pc
 
 QTLtools cis --vcf $vcf --bed $bed --cov $cov --mapping $thr\
     --include-samples $samples --normal --chunk $PBS_ARRAYID 64\
