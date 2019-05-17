@@ -157,7 +157,7 @@ O script `0-prepare_input.sh` indica os arquivos de input que precisamos baixar 
 Vamos filtrar o catálogo de variantes GWAS para manter somente aquelas com p-valor menor que 10^-8:
 
 ```
-Rscritp 1-filter_gwascatalog.R
+Rscript 1-filter_gwascatalog.R
 ```
 
 Agora em posse de GWAS e eQTLs, vamos cruzar os dados com o QTLtools (cada aluno pode executar um cromossomo):
