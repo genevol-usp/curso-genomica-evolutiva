@@ -1,8 +1,5 @@
 #!/bin/bash
 
-mkdir -p ./log
-mkdir -p ./results
-
 for PC in $(seq 0 10 100)
 do
     for CHUNK in $(seq 1 64)

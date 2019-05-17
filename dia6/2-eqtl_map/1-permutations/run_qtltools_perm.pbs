@@ -5,15 +5,15 @@
 #PBS -l walltime=24:00:00 
 #PBS -q short 
 #PBS -j oe 
-#PBS -o $HOME/curso-genomica-evolutiva/dia6/2-eqtl_map/permutations/log/$PBS_JOBID.log
+#PBS -o /scratch/bio5789/log/$PBS_JOBID.log
 
 cd $PBS_O_WORKDIR
 
-samples=../genotypes/sampleids.txt
-vcf=../genotypes/ALL.chrs.eur.biallelic.maf.vcf.gz
-cov=../genotypes/covariates_genos.txt
-bed=../phenotypes/phenotypes_$PC.bed.gz
-out=./results/permutations_$PC
+samples=../0-genotypes/sampleids.txt
+vcf=/scratch/bio5789/genotypes/ALL.chrs.yri.biallelic.maf.vcf.gz
+cov=../0-genotypes/covariates_genos.txt
+bed=../0-phenotypes/phenotypes_$PC.bed.gz
+out=/scratch/bio5789/permutations/permutations_$PC
 
 QTLtools cis --vcf $vcf --bed $bed --cov $cov --include-samples $samples\
     --normal --chunk $CHUNK 64 --permute 1000 --out ${out}_$CHUNK.txt
