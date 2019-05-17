@@ -15,19 +15,19 @@ chr=$PBS_ARRAYID
 samples=./sampleids.txt 
 vcfdir=/raid/genevol/kgp_vcf/phase3_20130502_grch38positions
 vcfin=$vcfdir/ALL.chr${chr}_GRCh38.genotypes.20170504.vcf.gz
-vcfout=./ALL.chr${chr}.eur.biallelic.maf.vcf.gz
-dups=duplicates_chr$chr.txt
+vcftmp=/scratch/bio5789/genotypes/temp.$chr.vcf.gz 
+vcfout=/scratch/bio5789/genotypes/ALL.chr${chr}.yri.biallelic.maf.vcf.gz
+dups=/scratch/bio5789/genotypes/duplicates_chr$chr.txt
 
 bcftools view --samples-file $samples $vcfin |\
     bcftools view --genotype ^miss -m2 -M2 --min-af 0.05:minor \
-    -o temp.$chr.vcf.gz -O z -
+    -o $vcftmp -O z -
 
-zcat temp.$chr.vcf.gz |\
-    grep -v "^#" |\
+bcftools view -H $vcftmp |\
     awk '{print $3}' |\
     uniq -c |\
     awk '$1>=2{print $2}' > $dups
 
-bcftools view --exclude "%ID=@$dups" -o $vcfout -O z temp.$chr.vcf.gz
+bcftools view --exclude "%ID=@$dups" -o $vcfout -O z $vcftmp
 
-rm temp.$chr.vcf.gz $dups
+rm $vcftmp $dups

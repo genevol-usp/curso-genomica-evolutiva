@@ -1,6 +1,6 @@
 #!/bin/bash
 
-vcf=./ALL.chrs.eur.biallelic.maf.vcf.gz
+vcf=/scratch/bio5789/genotypes/ALL.chrs.yri.biallelic.maf.vcf.gz
 out=./genos
 log=./pca.log
 
