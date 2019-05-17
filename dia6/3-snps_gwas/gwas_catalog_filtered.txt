@@ -1,0 +1,1 @@
+/home/vitor/hlaexpression/geuvadis_reanalysis/data/gwas_catalog/gwas_catalog_filtered.txt
