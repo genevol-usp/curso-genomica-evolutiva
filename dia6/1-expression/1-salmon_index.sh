@@ -9,4 +9,6 @@
 
 cd $PBS_O_WORKDIR
 
-salmon index -t ./gencode.v25.transcripts.fa -i transcripts_index --type quasi -k 31 
+indexout=/scratch/bio5789/transcripts_index
+
+salmon index -t ./gencode.v25.transcripts.fa.gz -i $indexout --type quasi -k 31 
