@@ -4,7 +4,8 @@ annotations <- "./gencode.v25.annotation.gtf" %>%
     read_tsv(comment = "##", col_names = FALSE, col_types = "c-cii-c-c")
 
 transc_filter <- annotations %>%
-    filter(X3 == "transcript") %>%
+    filter(X3 == "transcript",
+	   X1 %in% paste0("chr", 1:22)) %>%
     select(chr = X1, X9) %>%
     rowid_to_column("i") %>%
     mutate(X9 = str_split(X9, "; ")) %>%
@@ -34,10 +35,10 @@ gene_annots <- annotations %>%
     spread(tag, id) %>%
     select(-i)
 
-sampleids <- read_tsv("../1-expression/sampleids.tsv", col_names = FALSE) %>%
+sampleids <- read_tsv("../../1-expression/sampleids.tsv", col_names = FALSE) %>%
     pull(X1)
 
-quant <- file.path("../1-expression", sampleids, "quant.sf") %>%
+quant <- file.path("/scratch/bio5789/quantifications", sampleids, "quant.sf") %>%
     setNames(sampleids) %>%
     map_df(. %>% read_tsv() %>% 
 	   mutate(Name = sub("^([^\\|]+).+$", "\\1", Name)) %>%
