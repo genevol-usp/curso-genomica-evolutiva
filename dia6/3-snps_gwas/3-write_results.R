@@ -7,7 +7,7 @@ annots <- "../2-eqtl_map/0-phenotypes/gencode.v25.annotation.gtf" %>%
 
 catalog <- read_tsv("./gwas_catalog_filtered.txt", col_names = c("var_id", "trait"))
 
-rtc <- sprintf("/scratch/bio5789/rtc/rtc_results_chr%d.txt", 1:22) %>%
+rtc <- sprintf("/scratch/bio5789-bkb/rtc/rtc_results_chr%d.txt", 1:22) %>%
     map_df(read_qtltools_rtc) %>%
     filter(rtc > .95) %>%
     select(gene, qtl_rank, qtl_var, gwas_var, r_squared, rtc)
