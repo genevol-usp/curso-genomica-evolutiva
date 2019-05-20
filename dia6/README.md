@@ -1,5 +1,7 @@
 # Mapeamento de variantes que influenciam traços quantitativos
 
+quiz: https://forms.gle/pmwTNEcRost4ff1r7
+
 As pastas acima refletem a organização da análise que faremos hoje:
 
 1. Primeiro, vamos estimar expressão gênica para 87 indivíduos Yoruba, para os quais RNA-seq do mRNA total foi disponibilizado pelo consórcio Geuvadis.
