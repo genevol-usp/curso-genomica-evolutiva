@@ -1,0 +1,206 @@
+---
+title: "Roteiro: Dados Genômicos, Diversidade Genética e Equilíbrio de Hardy-Weinberg"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message  = FALSE, comment = '')
+```
+
+```{r pkgs}
+library(tidyverse)
+```
+
+Os objetivos desta atividade prática são os seguintes:
+
+- Permitir um primeiro contato com diferentes formatos de armazenamento de dados genômicos.
+- Usar scripts em bash e vcftools para processar esses arquivos, gerando informações específicas a respeito de um subconjunto dos dados presentes no repositório do 1000 Genomes project.
+- Explorar dados de diversidade genética e frequências genotípicas e fazer interpretações de processos evolutivos que explicam os padrões encontrados.
+
+
+# Formato de dados
+
+## Sequenciamento (fastq)
+
+```{bash}
+zcat $HOME/hlaexpression/geuvadis_reanalysis/data/fastq/ERR188021_1.fastq.gz |\
+    head -n20
+```
+
+## Mapeamento (fastq -> BAM)
+
+```{bash}
+samtools view -h /scratch/vitor/mappings/ERR188482_Aligned.sortedByCoord.out.bam |\
+    head -n201 |\
+    sed '26,196d'
+```
+
+##  Variant calling (BAM -> VCF)
+
+```{bash}
+zcat ./data/ALL.chr21_GRCh38.genotypes.20170504.vcf.gz |\
+    head -n 140 |\
+    sed '28,88d' | sed '30d'
+```
+
+
+# VCFtools: manipulação e análises com arquivos VCF
+
+Nesta etapa, iremos explorar os dados em formato vcf. Nosso primeiro desafio será criar um arquivo que contém um subconjunto do total de dados, facilitando a execução. Nosso objetivo é buscar, nos arquivos do projeto 1000 Genomas, um subconjunto de indivíduos africanos, restrito ao cromossomo 21.
+
+## Gerando um subset do VCF com indivíduos e variantes de interesse
+
+```{bash}
+cat ./vcftools_subset.sh
+```
+
+A seguir, nossa tarefa será usar esses dados para extrair algumas informações básicas, que iremos analisar.
+
+1. Frequências genotípicas observadas, esperadas, significância estatísticas do desvio, para cada sítio.
+2. Descrição de frequências alélicas para cada sítio.
+3. Diversidade genética estimada por pi (o número médio de diferenças entre pares de sequências) para janelas de 50kb.
+
+
+## Usando vcftools para fazer cálculo de estatísticas populacionais
+
+```{bash}
+cat ./vcftools_popgen.sh
+```
+
+De posso dessas análises, vamos agora explorar os achados e interpretá-los.
+
+## Há desvios de HW no cromossomo 21?
+
+Nossa primeira tarefa será examinar se há regiões do cromossomo 21 com muito desvio de proporções esperadas sob HW.
+
+Podemos fazer isso simplesmente examinando como os p-values se distribuem ao longo do cromossomo 21. Lembre que quando o -log10 do p-value é alto, isso significa que o p-value é baixo, implicando que é muito improvável aquela amostra ser oriunda de uma população que evolui sobre condições de Hardy-Weinberg.
+
+Há alguma região com aparente desvio de proporções de HW? Caso sim, vamos investigá-la mais a fundo.
+
+
+```{r chr21_hwe_p}
+hw <- read_tsv("./results/chr21.yri.hwe")
+
+ggplot(hw, aes(POS, -log10(P_HWE))) +
+    geom_point(alpha = .25) +
+    scale_x_continuous(breaks = scales::pretty_breaks(8),
+		       labels = function(x) x/1e6) +
+    theme_bw() +
+    labs(x = "Position (Mb)", y = expression(paste("-log"[10], italic(Pvalue))))
+```
+
+## Como as frequências genotípicas diferem das esperadas?
+
+Para começar, vamos nos lembrar que, assumindo HWE, temos uma expectativa teórica sobre qual deve ser a relação entre frequências alélicas e genotípicas. Sua tarefa será examinar se, para os dados do cromossomo 21, as frequências dos genótipos se encaixam nessas expectativas. Faça isso usando o R e uma tabela com frequências genotípicas observadas, que será gerada com o seguinte script, a partir do resultado gerado pelo vcftools.
+
+```{bash, eval=FALSE, echo=TRUE}
+Rscript parse_genocounts.R
+```
+
+Agora vamos gerar os gráficos, no R, para as frequências genotípicas observadas para cada valor de frequência do alelo referência, e comparar com a expectativa de equilíbrio de Hardy-Weinberg. Uma dica: sob HW, o gráfico que desejamos é uma relação entre a frequência alélica e a dos genótipos. E ele é o logotipo do nosso laboratório. Dê uma olhada: https://github.com/genevol-usp/curso-genomica-evolutiva/blob/master/logo.jpg
+
+Como os dados empíricos diferem dos esperados? O que pode explicar esse padrão? Tente fazer essa análise de modo separado para as regiões com e sem desvio aparente (com base nos achados dos p-values) e discuta as diferenças.
+
+### Crh21 inteiro
+
+```{r chr21_whole}
+freq <- read_tsv("./results/chr21.yri.frq", skip = 1,
+                 col_names = c("chr", "pos", "n_alleles", "n_chr", "f_ref", "f_alt")) %>%
+    select(pos, f_ref, f_alt) %>%
+    mutate_at(vars(f_ref, f_alt), ~sub("^[A-Z]+:", "", .)) %>%
+    mutate_at(vars(f_ref, f_alt), as.numeric) 
+
+freqs_df <- hw %>%
+    select(pos = POS, obs = 3) %>%
+    separate(obs, c("ref_ref", "ref_alt", "alt_alt"), sep = "/", convert = TRUE) %>%
+    mutate(n = pmap_int(list(ref_ref, ref_alt, alt_alt), sum)) %>%
+    mutate_at(vars(ref_ref:alt_alt), ~./n) %>%
+    left_join(freq, by = "pos") %>%
+    select(pos, f = f_ref, ref_ref:alt_alt) %>%
+    gather(genotype, freq, ref_ref:alt_alt)
+    
+theor <- 
+    tibble(f = seq(0, 1, .01),
+           ref_ref = f^2,
+           ref_alt = 2*f*(1-f),
+           alt_alt = (1-f)^2) %>%
+    gather(genotype, freq, ref_ref:alt_alt)
+
+ggplot(freqs_df) +
+    geom_point(aes(f, freq, group = genotype, color = genotype), 
+               alpha = .25) +
+    geom_line(data = theor, aes(f, freq, group = genotype),
+              size = 2.5, show.legend = FALSE) + 
+    geom_line(data = theor, aes(f, freq, group = genotype, color = genotype),
+              size = 2, show.legend = FALSE) + 
+    ggsci::scale_color_npg() +
+    theme_bw() +
+    guides(color = guide_legend(override.aes = list(alpha = 1))) +
+    labs(x = "Reference allele frequency", y = "Genotype frequency")
+```
+
+
+### Chr21: região com alto desvio
+```{r chr21_short}
+
+
+ggplot(filter(freqs_df, pos > 7500000, pos < 12500000)) +
+    geom_point(aes(f, freq, group = genotype, color = genotype), 
+               alpha = .25) +
+    geom_line(data = theor, aes(f, freq, group = genotype),
+              size = 2.5, show.legend = FALSE) + 
+    geom_line(data = theor, aes(f, freq, group = genotype, color = genotype),
+              size = 2, show.legend = FALSE) + 
+    ggsci::scale_color_npg() +
+    theme_bw() +
+    guides(color = guide_legend(override.aes = list(alpha = 1))) +
+    labs(x = "Reference allele frequency", y = "Genotype frequency")
+```
+
+### Chr21: região com baixo desvio
+
+```{r chr21_long}
+
+ggplot(filter(freqs_df, pos > 15000000, pos < 25000000)) +
+    geom_point(aes(f, freq, group = genotype, color = genotype), 
+               alpha = .25) +
+    geom_line(data = theor, aes(f, freq, group = genotype),
+              size = 2.5, show.legend = FALSE) + 
+    geom_line(data = theor, aes(f, freq, group = genotype, color = genotype),
+              size = 2, show.legend = FALSE) + 
+    ggsci::scale_color_npg() +
+    theme_bw() +
+    guides(color = guide_legend(override.aes = list(alpha = 1))) +
+    labs(x = "Reference allele frequency", y = "Genotype frequency")
+```
+
+
+
+
+## Como a diversidade genética se distribui ao longo do Chr21
+
+Na aula de hoje vimos o conceito de heterozigose, que é uma medida de diversidade genética. Uma forma de estimar heterozigose para dados moleculares é através da "diversidade nucleotídica" (abreviada pela letra grega `π`), que é dada pelo número médio de diferenças entre pares de sequências. Uma das análises que fizemos gerou estimativas de `π` para janelas de 50kb ao longo do cromossomo 21. Examine esses dados, veja qual o `π` médio, e discuta o que ele lhe diz sobre a diversidade genética humana.
+
+
+```{r chr21_pi}
+chr21_pi <- read_tsv("./results/chr21.yri.windowed.pi") %>%
+    mutate(POS = ((BIN_START + BIN_END)/2)/1e6)
+
+ggplot(chr21_pi, aes(POS, PI)) +
+    geom_line() + 
+    theme_bw() +
+    theme(panel.grid = element_blank()) +
+    labs(x = "Position (Mb)", y = expression("Diversidade"~(pi)))
+```
+
+
+Faça uma continha: assumindo que cada um de nossos genomas tem 3.000.000.000 de bases, e que os dados para o cromossomo 21 são representativos de todos os outros, em média quantas diferenças você estima que existem entre dois indivíduos quaisquer?
+
+
+# Leitura pós-aula
+
+Tendo obtido esses resultados para Hardy-Weinberg, leia o artigo de Graffelman and Weir (2017) e tente identificar nele respostas para os resultados obtidos.
+
+
+
+
